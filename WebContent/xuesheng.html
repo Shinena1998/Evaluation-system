@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<!-- 
+Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.4
+Version: 4.0
+Author: KeenThemes
+Website: http://www.keenthemes.com/
+Contact: support@keenthemes.com
+Follow: www.twitter.com/keenthemes
+Like: www.facebook.com/keenthemes
+Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
+-->
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+<meta charset="utf-8"/>
+<title>Metronic | Form Stuff - Material Design Form Controls</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta content="" name="description"/>
+<meta content="" name="author"/>
+<script src="livecss.js" type="text/javascript"></script>
+<!-- BEGIN GLOBAL MANDATORY STYLES -->
+<link href="assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+<link href="assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+<link href="assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css"/>
+<!-- END GLOBAL MANDATORY STYLES -->
+<!-- BEGIN THEME STYLES -->
+<link href="assets/global/css/components.css" id="style_components" rel="stylesheet" type="text/css"/>
+<link href="assets/global/css/plugins.css" rel="stylesheet" type="text/css"/>
+<link href="assets/admin/layout/css/layout.css" rel="stylesheet" type="text/css"/>
+<link id="style_color" href="assets/admin/layout/css/themes/darkblue.css" rel="stylesheet" type="text/css"/>
+<link href="assets/admin/layout/css/custom.css" rel="stylesheet" type="text/css"/>
+<!-- END THEME STYLES -->
+<link rel="shortcut icon" href="favicon.ico"/>
+</head>
+<style>
+.name{
+	background:none;
+	border:0px;
+	padding:0px;
+	font-weight:bloder;
+}
+
+.name2{
+	border:0px;
+	padding:0px;
+	font-weight:bloder;
+	color:black
+}
+.nav>li>a {
+    position: relative;
+    float: left;
+    padding: 10px 15px;
+    margin-left: 10px;
+}
+</style>
+<body class="page-header-fixed page-quick-sidebar-over-content ">
+<!-- BEGIN HEADER -->
+<div class="page-header navbar navbar-fixed-top">
+	<!-- BEGIN HEADER INNER -->
+	<div class="page-header-inner">
+		<!-- BEGIN LOGO -->
+		<div class="page-logo">
+			<a href="index.html">
+			<img src="assets/admin/layout/img/logo.png" alt="logo" class="logo-default"/>
+			</a>
+			<div class="menu-toggler sidebar-toggler hide">
+				<!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+			</div>
+		</div>
+		<!-- END LOGO -->
+		<!-- BEGIN RESPONSIVE MENU TOGGLER -->
+		<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+		</a>
+		<!-- END RESPONSIVE MENU TOGGLER -->
+		<!-- BEGIN TOP NAVIGATION MENU -->
+		<div class="top-menu">
+			<ul class="nav navbar-nav pull-right">
+				<!-- BEGIN NOTIFICATION DROPDOWN -->
+				<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+				
+				<!-- END TODO DROPDOWN -->
+				<!-- BEGIN USER LOGIN DROPDOWN -->
+				<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+				<li class="dropdown dropdown-user">
+					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+					<!-- <span class="username username-hide-on-mobile">
+					Nick </span> -->
+					<input type="text" value="" readonly size="" class="name username username-hide-on-mobile" id="guan">
+					</a>
+				</li>
+				<!-- END USER LOGIN DROPDOWN -->
+				<!-- BEGIN QUICK SIDEBAR TOGGLER -->
+				<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+				<li class="dropdown dropdown-quick-sidebar-toggler">
+					<a href="javascript:;" class="dropdown-toggle" id="exit">
+					<i class="icon-logout"></i>
+					</a>
+				</li>
+				<!-- END QUICK SIDEBAR TOGGLER -->
+			</ul>
+		</div>
+		<!-- END TOP NAVIGATION MENU -->
+	</div>
+	<!-- END HEADER INNER -->
+</div>
+<!-- END HEADER -->
+<div class="clearfix">
+</div>
+<!-- BEGIN CONTAINER -->
+<div class="page-container">
+	<!-- BEGIN SIDEBAR -->
+	<div class="page-sidebar-wrapper">
+		<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+		<!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+		<div class="page-sidebar navbar-collapse collapse">
+			<!-- BEGIN SIDEBAR MENU -->
+			<!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+			<!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+			<!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+			<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+			<!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+			<!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+			<ul class="page-sidebar-menu" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+				<!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
+				<li class="sidebar-toggler-wrapper">
+					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+					<div class="sidebar-toggler">
+					</div>
+					<!-- END SIDEBAR TOGGLER BUTTON -->
+				</li>
+				<!-- DOC: To remove the search box from the sidebar you just need to completely remove the below "sidebar-search-wrapper" LI element -->
+				<li class="sidebar-search-wrapper">
+					<!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
+					<!-- DOC: Apply "sidebar-search-bordered" class the below search form to have bordered search box -->
+					<!-- DOC: Apply "sidebar-search-bordered sidebar-search-solid" class the below search form to have bordered & solid search box -->
+					<form class="sidebar-search " action="extra_search.html" method="POST">
+						<a href="javascript:;" class="remove">
+						<i class="icon-close"></i>
+						</a>
+						<div class="input-group">
+						</div>
+					</form>
+					<!-- END RESPONSIVE QUICK SEARCH FORM -->
+				</li>
+				<li class="start ">
+					<a href="javascript:;">
+					<i class="icon-home"></i>
+					<span class="title">我的服务</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">
+						<li onclick="qiehuan('info')">
+							<a href="#">
+							<i class="icon-bar-chart"></i>
+							个人信息</a>
+						</li>
+						<li onclick="qiehuan('mima')">
+							<a href="#">
+							<i class="icon-bar-chart"></i>
+							修改密码</a>
+						</li>
+					</ul>
+				</li>
+				<li class="start ">
+					<a href="javascript:;">
+					<i class="icon-paper-plane"></i>
+					<span class="title">评教</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">
+						<li  onclick="qiehuan('pingjiao')">
+							<a href="#">
+							<i class="icon-bar-chart"></i>
+							评价教工</a>
+						</li>
+						<li  onclick="qiehuan('mingxing')">
+							<a href="#">
+							<i class="icon-bulb"></i>
+							评明星老师</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<!-- END SIDEBAR MENU -->
+		</div>
+	</div>
+	<!-- END SIDEBAR -->
+	<!-- BEGIN CONTENT -->
+	<div class="page-content-wrapper" >
+		<div class="page-content">
+			<!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+			<div class="modal fade" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+							<h4 class="modal-title">大爱结衣</h4>
+						</div>
+						<div class="modal-body">
+							 由比滨结衣
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn blue">Save changes</button>
+							<button type="button" class="btn default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal-dialog -->
+			</div>
+			<!-- /.modal -->
+			<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+			<!-- BEGIN STYLE CUSTOMIZER -->
+			
+			<!-- END STYLE CUSTOMIZER -->
+			<!-- BEGIN PAGE HEADER-->
+			<h3 class="page-title">
+			考评管理系统<small>一个专注于考评的系统</small>
+			</h3>
+			<div class="page-bar">
+					<ul class="nav navbar-nav">
+						<!-- DOC: Remove data-hover="dropdown" and data-close-others="true" attributes below to disable the horizontal opening on mouse hover -->
+						<li class="classic-menu-dropdown">
+							<a data-toggle="dropdown" href="javascript:;" data-hover="megamenu-dropdown" data-close-others="true">
+							我的服务<i class="fa fa-angle-down"></i>
+							</a>
+							<ul class="dropdown-menu pull-left">
+								<li onclick="qiehuan('info')">
+									<a href="javascript:;" >
+									<i class="fa fa-bookmark-o"></i>个人信息</a>
+								</li>
+								<li onclick="qiehuan('mima')">
+									<a href="javascript:;">
+									<i class="fa fa-user"></i>修改密码</a>
+								</li>
+							</ul>
+						</li>
+						<li class="classic-menu-dropdown">
+							<a data-toggle="dropdown" href="javascript:;" data-hover="megamenu-dropdown" data-close-others="true">
+							评教<i class="fa fa-angle-down"></i>
+							</a>
+							<ul class="dropdown-menu pull-left">
+								<li onclick="qiehuan('pingjiao')">
+									<a href="javascript:;">
+									<i class="fa fa-bookmark-o"></i>评价教工</a>
+								</li>
+								<li onclick="qiehuan('mingxing')">
+									<a href="javascript:;">
+									<i class="fa fa-user"></i>评明星老师</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+			</div>
+			<!-- END PAGE HEADER-->
+			<!-- BEGIN PAGE CONTENT-->
+			<div class="row" id="info">
+				<div class="col-md-12">
+					<!-- BEGIN VALIDATION STATES-->
+					<div class="portlet box purple">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-gift"></i>个人信息
+							</div>
+							<div class="tools">
+							</div>
+						</div>
+						<div class="portlet-body form">
+							<form action="#" class="form-horizontal">
+							<div class="form-actions top">
+							</div>
+							<!-- BEGIN FORM-->
+								<div class="form-body">
+									<div class="alert alert-danger display-hide">
+										<button class="close" data-close="alert"></button>
+										You have some form errors. Please check below.
+									</div>
+									<div class="alert alert-success display-hide">
+										<button class="close" data-close="alert"></button>
+										Your form validation is successful!
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">学号<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<input type="text"  readonly name="1" id = "1" value=""  class="form-control"/>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">姓名<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<input type="text" readonly name="2" id = "2" value=""  class="form-control"/>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">年级<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<input type="text" readonly name="3" id = "3" value=""  class="form-control"/>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">班级<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<input type="text" readonly name="4" id = "4" value=""  class="form-control"/>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">部门<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<input name="5" id="5" type="text" readonly class="form-control"/>
+										</div>
+									</div>
+								</div>
+							<div class="form-actions top">
+							</div>
+							</form>
+							<!-- END FORM-->
+						</div>
+					</div>
+					<!-- END VALIDATION STATES-->
+				</div>
+			</div>
+			<!-- END PAGE CONTENT-->
+			<div class="row" id="mima">
+				<div class="col-md-12">
+					<div class="tabbable-line boxless tabbable-reversed">
+						<div class="tab-content">
+							<div class="tab-pane active" id="tab_0">
+								<div class="portlet box yellow">
+									<div class="portlet-title">
+										<div class="caption">
+											<i class="fa fa-gift"></i>修改密码
+										</div>
+									</div>
+									<div class="portlet-body form">
+										<!-- BEGIN FORM-->
+										<form id="mima1" class="form-horizontal">
+											<div class="form-actions top">
+											</div>
+											<div class="form-body">
+												<div class="form-group">
+													<label class="col-md-3 control-label">原密码</label>
+													<div class="col-md-4">
+														<div class="input-group">
+															<input type="password" class="form-control" placeholder="Old Password" name="old" id="old">
+															<span class="input-group-addon">
+															<i class="fa fa-user"></i>
+															</span>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-3 control-label">新密码</label>
+													<div class="col-md-4">
+														<div class="input-group">
+															<input type="password" class="form-control" placeholder="New Password" name="new" id="new">
+															<span class="input-group-addon">
+															<i class="fa fa-user"></i>
+															</span>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-3 control-label">再次输入</label>
+													<div class="col-md-4">
+														<div class="input-group">
+															<input type="password" class="form-control" placeholder="again" name="newagain" id="newagain">
+															<span class="input-group-addon">
+															<i class="fa fa-user"></i>
+															</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-actions fluid">
+												<div class="row">
+													<div class="col-md-offset-3 col-md-9">
+														<button type="button" class="btn green" onclick="mima()">提交</button>
+														<button type="reset" class="btn default">取消</button>
+													</div>
+												</div>
+											</div>
+										</form>
+										<!-- END FORM-->
+									</div>
+								</div>
+								
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row" id="mingxing">
+				<div class="col-md-12">
+					<!-- BEGIN VALIDATION STATES-->
+					<div class="portlet box blue">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-gift"></i>2018-2019年第1学期评明星老师
+							</div>
+							<div class="tools">
+								<input type="text" value="投票完毕" readonly size="7" class="name username username-hide-on-mobile" id="guan1">
+							</div>
+						</div>
+						<div class="portlet-body form">
+							<form id="xiugai" class="form-horizontal">
+							<!-- BEGIN FORM-->
+								<div class="form-body">
+									<div class="alert alert-danger display-hide">
+										<button class="close" data-close="alert"></button>
+										You have some form errors. Please check below.
+									</div>
+									<div class="alert alert-success display-hide">
+										<button class="close" data-close="alert"></button>
+										Your form validation is successful!
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">师德最高尚的老师<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" id="10" name="a">
+												<option></option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">“271”教学模式课堂结构把握最好的老师<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" id="11" name="b">
+												<option></option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">“五人小组”课改最有效的老师<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" id="12" name="c">
+												<option></option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">作业批改最有效的老师<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" id="13" name="d">
+												<option></option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">讲课最生动有效的老师<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" id="14" name="e">
+												<option></option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">课堂秩序最好的老师<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" id="15" name="f">
+												<option></option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">电子白板使用最好的老师<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" id="16" name="g">
+												<option></option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">是批评教育学生方法最得当的老师<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" id="17" name="h">
+												<option></option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">辅导学生最有耐心的老师<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" id="18" name="i">
+												<option></option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">板书最好看的老师<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" id="19" name="j">
+												<option></option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="form-actions top">
+									<div class="row">
+										<div class="col-md-offset-3 col-md-9">
+											<button type="button" class="btn green" onclick="ming()">提交</button>
+											<button type="reset" class="btn default">取消</button>
+										</div>
+									</div>
+								</div>
+							</form>
+							<!-- END FORM-->
+						</div>
+					</div>
+					<!-- END VALIDATION STATES-->
+				</div>
+			</div>
+			<div class="row" id="pingjiao">
+				<div class="col-md-12">
+					<!-- BEGIN VALIDATION STATES-->
+					<div class="portlet box blue">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-gift"></i>2018-2019年第1学期评教
+							</div>
+							<div class="tools">
+								<select  id="teacher" name="tea" class="name2" onchange="change()">
+								</select>
+							</div>
+						</div>
+						<div class="portlet-body form">
+							<form id="contant" class="form-horizontal">
+							<!-- BEGIN FORM-->
+								<div class="form-body">
+									<div class="alert alert-danger display-hide">
+										<button class="close" data-close="alert"></button>
+										You have some form errors. Please check below.
+									</div>
+									<div class="alert alert-success display-hide">
+										<button class="close" data-close="alert"></button>
+										Your form validation is successful!
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">讲课很明白<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" id="30" name="k">
+												<option value="5">A</option>
+												<option value="4">B</option>
+												<option value="3">C</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">辅导有耐心<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" id="31" name="l">
+												<option value="5">A</option>
+												<option value="4">B</option>
+												<option value="3">C</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">板书很美观<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" id="32" name="m">
+												<option value="5">A</option>
+												<option value="4">B</option>
+												<option value="3">C</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">上课我喜欢<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" id="33" name="n">
+												<option value="5">A</option>
+												<option value="4">B</option>
+												<option value="3">C</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">检测有反馈<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" id="34" name="o">
+												<option value="5">A</option>
+												<option value="4">B</option>
+												<option value="3">C</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">作业很适度<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" id="35" name="p">
+												<option value="5">A</option>
+												<option value="4">B</option>
+												<option value="3">C</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">作业都批改<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" id="36" name="q">
+												<option value="5">A</option>
+												<option value="4">B</option>
+												<option value="3">C</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">老师关系我<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" id="37" name="r">
+												<option value="5">A</option>
+												<option value="4">B</option>
+												<option value="3">C</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">我爱老师<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" id="38" name="s">
+												<option value="5">A</option>
+												<option value="4">B</option>
+												<option value="3">C</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">家长满意<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" id="39" name="t">
+												<option value="5">A</option>
+												<option value="4">B</option>
+												<option value="3">C</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">学生评语<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<textarea rows="3" class="form-control" name="u" id="40"></textarea>
+										</div>
+									</div>
+								</div>
+								<div class="form-actions top">
+									<div class="row">
+										<div class="col-md-offset-3 col-md-9">
+											<button type="button" class="btn green" onclick="ping()">保存</button>
+											<button type="button" class="btn blue" onclick="submit1()">提交</button>
+										</div>
+									</div>
+								</div>
+							</form>
+							<!-- END FORM-->
+						</div>
+					</div>
+					<!-- END VALIDATION STATES-->
+				</div>
+			</div>
+	</div>
+</div>
+<!-- END CONTENT -->
+<!-- BEGIN QUICK SIDEBAR -->
+<!-- END QUICK SIDEBAR -->
+<!-- END CONTAINER -->
+<!-- BEGIN FOOTER -->
+<div class="page-footer">
+<div class="page-footer-inner">
+	 2019 &copy; xaut by yuigahama yui. <a href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">Purchase Metronic!</a>
+</div>
+<div class="scroll-to-top">
+	<i class="icon-arrow-up"></i>
+</div>
+</div>
+<!-- END FOOTER -->
+<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+<!-- BEGIN CORE PLUGINS -->
+<!--[if lt IE 9]>
+<script src="assets/global/plugins/respond.min.js"></script>
+<script src="assets/global/plugins/excanvas.min.js"></script> 
+<![endif]-->
+<script src="assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
+<!-- IMPORTANT! Load jquery-ui.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+<script src="assets/global/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/jquery.cokie.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+<!-- END CORE PLUGINS -->
+<script src="assets/global/scripts/metronic.js" type="text/javascript"></script>
+<script src="assets/admin/layout/scripts/layout.js" type="text/javascript"></script>
+<script src="assets/admin/layout/scripts/quick-sidebar.js" type="text/javascript"></script>
+<script src="assets/admin/layout/scripts/demo.js" type="text/javascript"></script>
+<script>
+var length //学生的老师数目
+var username //学生id
+var loaction //学生班级
+var teacher //老师的id
+var evaLength //评教问题格式
+var shijian = "" //当前学年学期
+var mingxing = []//该学生的授课老师
+var hasming = false;//学生是否给明星老师投票
+var hasEva = [] //标记评教老师
+jQuery(document).ready(function() {   
+   // initiate layout and plugins
+	Metronic.init(); // init metronic core components
+	Layout.init(); // init current layout
+	QuickSidebar.init(); // init quick sidebar
+	Demo.init(); // init demo features
+	var str = location.search.split("?")
+    console.log(str)
+   	username = str[1]
+    /* username = "zhanghao=3160212"; */
+    console.log(username)
+	$("#mima").hide();
+	$("#mingxing").hide()
+	$("#pingjiao").hide()
+	$("#guan").attr("value","张冰");
+	$("#guan").attr("size",3);//汉子长度*2-1，数字字母长度
+	getInfo()
+	$("#exit").click(function(){
+		$(location).attr("href","login.html")
+	})
+});
+function denglutai(){
+	if(zhanghao == null){
+		$(location).attr("href","login.html")
+	}else{
+		$.ajax({
+			url : "DengLuTai",
+			//同步方式
+			async : false,
+			data : zhanghao+"&LeiXing=XueSheng",
+			type : "get",
+			//指定请求成功后执行的回调函数
+			success : function(data) {
+				if(data == "false"){
+					$(location).attr("href","login.html")
+				}
+			}
+		})	
+	}
+}
+function qiehuan(res){
+	console.log("213")
+	if(res == "pingjiao"){
+		if(getpjInfo()){
+			getteacher(shijian + "&" + username)
+			$("#pingjiao").show();
+			$("#info").hide();
+			$("#mima").hide();
+			$("#mingxing").hide();	
+		}else{
+			alert("评教时间未到")
+		}
+		
+	}else if(res == "info"){
+		$("#info").show();
+		$("#pingjiao").hide();
+		$("#mingxing").hide();
+		$("#mima").hide();
+	}else if(res == "mingxing"){
+		if(getpjInfo()){
+			getming()
+			$("#info").hide();
+			$("#pingjiao").hide();
+			$("#mingxing").show();
+			$("#mima").hide();
+		}else{
+			alert("评教时间未到")
+		}
+	}else if(res == "mima"){
+		$("#info").hide();
+		$("#pingjiao").hide();
+		$("#mingxing").hide();
+		$("#mima").show();
+	}
+}
+//获得个人信息
+function getInfo(){
+	console.log(username)
+	$.ajax({
+		url : "XueShengXinXi",
+		//同步方式
+		async : false,
+		data : username,
+		type : "get",
+		//指定请求成功后执行的回调函数
+		success : function(data) {
+			console.log(data)
+			data = JSON.parse(data)
+			for(i=1; i <= data.length ; i ++){
+				$("#"+i).val(data[i-1])
+			}
+		}
+	})
+}
+//修改密码
+function mima(){
+    if($("#new").val() == $("#newagain").val()){
+    	var data = $("#mimaf").serialize()
+    	console.log(data)
+    	var data = data + "&" + username + "&leixing=XueShengBiao"
+    	console.log(data)
+        $.ajax({
+    		url : "XiuGaiMiMa",
+    		//同步方式
+    		async : false,
+    		data : data,
+    		type : "post",
+    		//指定请求成功后执行的回调函数
+    		success : function(data) {
+    			alert(data)
+    		}
+    	})
+    }else{
+    	alert("两次密码不一致，请重新输入")
+    }
+}
+//验证是否在评教时间内
+function getpjInfo(){
+	var res = null
+	$.ajax({
+		url : "PingJiaoXueNianQi",
+		//同步方式
+		async : false,
+		type : "post",
+		//指定请求成功后执行的回调函数
+		success : function(data) {
+			console.log(data)
+			k = JSON.parse(data)
+			shijian = "xuenian="+k[0]+"&xueqi="+k[1];
+			var date = new Date()
+			var riqi = date.toLocaleDateString().replace(/\//g,"-");
+			var time = shijian+"&riqi="+riqi
+			console.log(time)
+			/* $("#xn1").val(xuenian)
+			$("#xq1").val(xueqi)
+			$("#xn2").val(xuenian)
+			$("#xq2").val(xueqi) */
+			$.ajax({
+				url : "PingJiaoXinXi",
+				//同步方式
+				async : false,
+				data : time,
+				type : "post",
+				//指定请求成功后执行的回调函数
+				success : function(data) {
+					console.log(data)
+					if(data == "到评教时间"){
+						/* getteacher("xuenian="+xuenian+"&xueqi="+xueqi+"&"+username) */
+						res = true
+					}else{
+						res = false
+					}
+				}
+			})
+		}
+	})
+	console.log(res)
+	return res
+}
+//获得明星投票信息
+function getming(){
+	var data = shijian + "&" + username 
+	console.log(data)
+	$.ajax({
+		url : "MingXingXinXi",
+		//同步方式
+		async : false,
+		data : data,
+		type : "post",
+		//指定请求成功后执行的回调函数
+		success : function(res) {
+			var info = JSON.parse(res)
+			console.log(info)
+			if(info.length > 0){
+				for(var i=0; i < info.length ; i ++){
+					var option = "<option value='"+info[i][3]+"'>"+info[i][5]+"</option>" 
+					var j = i+10
+					$("#"+j).empty()
+					$("#"+j).append(option)
+				}
+				hasming = true;
+				$("#guan1").val('投票完毕')
+			}else{
+				$("#guan1").val('还没投票')
+				getteacher(data);
+			}
+		}
+	})
+}
+
+//获得该学生的授课老师
+function getteacher(res){
+	console.log(res)
+	$.ajax({
+		url : "JiaoShengDuiYing",
+		//同步方式
+		async : false,
+		data : res,
+		type : "post",
+		//指定请求成功后执行的回调函数
+		success : function(data) {
+			console.log(data)
+			mingxing = JSON.parse(data)
+			console.log()
+			var option = ""
+			for(var i=0; i < mingxing.length ; i ++){
+				hasEva[i] = false
+				if(mingxing[i][2] == "1"){
+					hasEva[i] = true
+				}
+				option += "<option value='"+mingxing[i][0]+"'>"+mingxing[i][3]+"</option>" 
+			}
+
+			$("#teacher").empty()
+			$("#teacher").append(option)
+			option = "<option></option>" + option
+			for(var i=10; i < 20 ; i ++){
+				$("#"+i).empty()
+				$("#"+i).append(option)
+			}
+			console.log(hasEva)
+			/* getping() */
+		}
+	})
+}
+//写入明星投票
+function ming(){
+	if(hasming){
+		alert("已经投票")
+	}else {
+		var data = $("#xiugai").serialize();
+		data += "&" + shijian + "&" + username 
+		console.log(data)
+		$.ajax({
+			url : "MingXingDeFen",
+			//同步方式
+			async : false,
+			data : data,
+			type : "post",
+			//指定请求成功后执行的回调函数
+			success : function(data) {
+				console.log(data)
+				alert(data)
+				if(data == "投票成功"){
+					hasming = true
+					getming()
+				}else{
+					hasming = false
+				}
+			}
+		})
+	}
+}
+/* //获得评教信息
+function getping(){
+	if(mingxing[0][2] == "1"){
+		var data = "jiaogong="+mingxing[0][0] + "&" + shijian + "&" + username 
+		console.log(data)
+	 	$.ajax({
+			url : "DePingJiaoXinXi",
+			//同步方式
+			async : false,
+			data : data,
+			type : "post",
+			//指定请求成功后执行的回调函数
+			success : function(data) {
+				var info = JSON.parse(data)
+				console.log("pingjiao"+info)
+				for(var i=0; i < info.length-1 ; i ++){
+					var j = i+30
+					$("#"+j).val(info[i][5])
+				}
+				$("#40").val(info[info.length-1])
+			}
+		})
+	}
+} */
+//切换教师显示评教信息
+function change(){
+	var jiaogonghao = $("#teacher").val()
+	console.log(jiaogonghao+"asdasd")
+	for(var i=0; i < mingxing.length ; i ++){
+		console.log(mingxing[i][0])
+		if(mingxing[i][0] == jiaogonghao){
+			console.log("asdasd")
+			if(mingxing[i][2] == "0"){
+				for(var k=0; k < 10 ; k ++){
+					var j = k+30
+					$("#"+j).val("5")
+				}
+				$("#40").val("")
+			}else{
+				var data = "jiaogong="+mingxing[i][0] + "&" + shijian + "&" + username 
+				console.log(data)
+			 	$.ajax({
+					url : "DePingJiaoXinXi",
+					//同步方式
+					async : false,
+					data : data,
+					type : "post",
+					//指定请求成功后执行的回调函数
+					success : function(data) {
+						console.log(data)
+						var info = JSON.parse(data)
+						for(var k=0; k < info.length-1 ; k ++){
+							var j = k+30
+							$("#"+j).val(info[k][5])
+						}
+						$("#40").val(info[info.length-1])
+					}
+				})
+			}
+			break;
+		}
+	}
+}
+//评教完毕，提交提示
+function submit1(){
+	var i = 0
+	for(var i = 0 ; i < hasEva.length ; i ++){
+		if(!hasEva[i]){
+			alert(mingxing[i][3]+"老师还没被评教")
+			return
+		}
+	}
+		alert("评教完毕")
+		$(location).attr('href',"#")
+}
+//写入学生评教
+function ping(){
+	var jiaogonghao = $("#teacher").val()
+	console.log(jiaogonghao+"asdasd")
+	for(var i=0; i < mingxing.length ; i ++){
+		if(mingxing[i][0] == jiaogonghao){
+			if(hasEva[i]){
+				alert("该老师已被评教")
+			}else{
+				var data = $("#contant").serialize();
+				data += "&" + shijian + "&" + username +"&tea="+ mingxing[i][0]
+				console.log(data)
+				$.ajax({
+					url : "XiePingJiaoDeFen",
+					//同步方式
+					async : false,
+					data : data,
+					type : "post",
+					//指定请求成功后执行的回调函数
+					success : function(data) {
+						console.log(data)
+						alert(data)
+						hasEva[i] = true
+						mingxing[i][2] = "1"
+					}
+				})
+			}
+			//如果是最后一位老师则不变
+			if(i < mingxing.length-1){
+				$("#teacher").val(mingxing[i+1][0])//自动切换下一位老师
+				change();
+			}
+			var bool = true
+			//检验是否所有老师都被评教
+			for(var t = 0 ; t < hasEva.length ; t++){
+				if(!hasEva[t]){
+					bool=false
+				}
+			}
+			if(bool){
+				alert("评教完成，请点击提交")
+			}
+			break;
+		}
+	}
+}
+</script>
+<!-- END JAVASCRIPTS -->
+</body>
+<!-- END BODY -->
+</html>
+		

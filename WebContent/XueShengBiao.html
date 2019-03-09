@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="jquery/jquery-3.3.1.min.js"></script>
+<title>学生</title>
+</head>
+<style>
+body{
+	width:100%;
+	height:100%;
+	background-color: #e6ecf0;
+	display:flex;
+	align-items:center;
+	flex-direction:column;
+	margin-top:0px;
+}
+.title{
+	width:100%;
+	font-size:25px;
+	display:flex;
+	align-items:center;
+	justify-content: center;
+}
+.chaxun{
+    margin-left:20px
+}
+.contant1{
+	width:100%;
+	display:flex;
+	align-items:center;
+	justify-content: center;
+}
+th{
+	padding-left:20px;
+	padding-right:20px;
+}
+.all{
+    width:841.8px;
+    background-color:white;
+}
+.tuichu{
+	border:none;
+	margin-right:5px;
+	background:none;
+}
+.top{
+	width:100%;
+	height:50px;
+	background-color:white;
+    background-image:url("img/top.png");
+	display:flex;
+	align-items:center;
+	justify-content: space-between;
+}
+.guanliyuan{
+	border:none;
+	color:blue;
+	font-size:100%;
+	background:none;
+}
+.logo{
+	display:flex;
+	flex-direction:row;
+}
+.logo-img{
+	width:150px;
+	height:50px;
+}
+.logo-text{
+	color:blue;
+	font-size:160%;
+	font-family:serif;
+	margin-left:5px;
+    line-height: 50px;
+}
+.gongneng{
+	background-color:#bbffc7;
+	width:100%;
+    position: relative;
+    float: left;
+    line-height: 150%;
+    margin-block-start:0px;
+    margin-block-end:0px;
+    margin-inline-start:0px;
+    margin-inline-end:0px;
+	margin:0PX;
+}
+.contant{
+    display: block;
+    float: left;
+    padding-left:15px;
+    padding-right:15px;
+    /* border-left:1px solid blue; */
+    border-right:1px solid blue;
+}
+ul{
+    list-style: none;
+   	line-height:50px;
+    padding-inline-start:0PX;
+}
+a{
+    text-decoration:none;
+}
+.xiugaid{
+	width:100%;
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+	justify-content: space-evenly;
+    margin-top: 30px;
+}
+span{
+    width: 100px;
+    font-size: 14px;
+    color: #333;
+    text-align: right;
+    display: inline-block;
+    margin-right: 10px;
+}
+.info{
+	border:none;
+}
+.pingjiao{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+    margin-top: 30px;
+}
+.span1{
+    width: 300px;
+}
+.xiugaid{
+	width:100%;
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+	justify-content: space-evenly;
+    margin-top: 30px;
+}
+.mingxing{
+	margin-left:-90px;
+}
+.xiugai_sub{
+	display:flex;
+    justify-content: space-evenly;  
+}
+.mima{
+	width:100%;
+	display:flex;
+	align-items:center;
+	justify-content: center;
+}
+.xuenian{
+	width:124px;
+	border:none;
+	font-size:25px;
+}
+.xueqi{
+	border:none;
+    font-size: 23px;
+    width: 78px;
+    padding: 0px
+}
+td{
+    text-align: center;
+}
+tr{
+	height:30px;
+	line-height:30px;
+}
+.teacher{
+    text-align: right;
+}
+</style>
+<body>
+
+<div class="all">
+	<div class="top">
+	    <div class="logo">
+			<img alt="logo" class="logo-img"src="img/logo_school.png">
+			<div class="logo-text">考评管理系统</div>
+		</div>
+		<div>欢迎您:<input class="guanliyuan" type="text" readonly name="guanliyuan" id="guan" value="21231" size="">同学&nbsp|<input class="tuichu" class="exit" type="button" readonly value="退出" onclick="tuichu()"></div>
+	</div>
+	<ul class="gongneng">
+		<li class="contant" onclick="xuanze('info')">  <a href="#">个人信息</a>  </li>
+		<li class="contant" onclick="xuanze('pingjiao')">  <a href="#">评价教师</a>  </li>
+		<li class="contant" onclick="xuanze('mingxing')">  <a href="#">评明星老师</a>  </li>
+		<li class="contant" onclick="xuanze('mima')">  <a href="#">修改密码</a>  </li>
+	</ul>
+	<div class="xiugaid" id='info'>
+		<ul class="xiugai">
+			<li><span>学号：</span><input class="info" readonly type="text" name="1" id = "1"></li>
+			<li><span>姓名：</span><input class="info" readonly type="text" name="2" id = "2"></li>
+			<li><span>年级：</span><input class="info" readonly type="text" name="3" id = "3"></li>
+			<li><span>班级：</span><input class="info" readonly type="text" name="4" id = "4"></li>
+			<li><span>部门：</span><input class="info" readonly type="text" name="5" id = "5"></li>
+		</ul>
+	</div>
+	<div class='pingjiao' id='pingjiao'>
+	    <div class="mima">
+	    	<h2>
+	    		<input class="xuenian" type="text" readonly  id="xn1" value="">学年<input class="xueqi" type="text" readonly  id="xq1" value="" >评教
+	    	</h2>
+	    </div>
+	    <form id="contant" class="teacher">
+		<select id="teacher" name="tea"  onchange="change()">
+		</select>
+		<table border="2">
+		<thead>
+		<tr>
+			<th>
+				 问题编号
+			</th>
+			<th>
+				 问题内容
+			</th>
+			<th>
+				 评分
+			</th>
+		</tr>
+		</thead>
+		<tbody id="cbody">
+			<tr>
+				<td>1</td>
+				<td>讲课很明白</td>
+				<td>
+					<select name="k" id="30">
+						<option>A</option>
+						<option>B</option>
+						<option>C</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>辅导有耐心</td>
+				<td>
+					<select name="l" id="31">
+						<option>A</option>
+						<option>B</option>
+						<option>C</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>板书很美观</td>
+				<td>
+					<select name="m" id="32">
+						<option>A</option>
+						<option>B</option>
+						<option>C</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>上课我喜欢</td>
+				<td>
+					<select name="n" id="33">
+						<option>A</option>
+						<option>B</option>
+						<option>C</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>检测有反馈</td>
+				<td>
+					<select name="o" id="34">
+						<option>A</option>
+						<option>B</option>
+						<option>C</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>作业很适度</td>
+				<td>
+					<select name="p" id="35">
+						<option>A</option>
+						<option>B</option>
+						<option>C</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>作业都批改</td>
+				<td>
+					<select name="q" id="36">
+						<option>A</option>
+						<option>B</option>
+						<option>C</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>老师关心我</td>
+				<td>
+					<select name="r" id="37">
+						<option>A</option>
+						<option>B</option>
+						<option>C</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>9</td>
+				<td>我爱老师</td>
+				<td>
+					<select name="s" id="38">
+						<option>A</option>
+						<option>B</option>
+						<option>C</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>10</td>
+				<td>家长满意</td>
+				<td>
+					<select name="t" id="39">
+						<option>A</option>
+						<option>B</option>
+						<option>C</option>
+					</select>
+				</td>
+			</tr>
+		</tbody>	
+		</table>
+		<input type="button" value="保存" onclick="ping()">
+		<input type="button" value="提交" onclick="submit1()">
+		</form>
+	</div>
+	<div id="mingxing">
+	    <div class="mima">
+	    	<h2>
+	    		<input class="xuenian" type="text" readonly  id="xn2" value="">学年<input class="xueqi" type="text" readonly  id="xq2" value="" >评明星教师
+	    	</h2>
+	    </div>
+		<form id="xiugai">
+		<div  class="xiugaid">
+		<ul class="mingxing">
+			<li><span class="span1">师德最高尚的老师：</span><select id="10" name="a"></select></li>	
+			<li><span class="span1">“271”教学模式课堂结构把握最好的老师：</span><select id="11" name="b"></select></li>
+			<li><span class="span1">“五人小组”课改最有效的老师：</span><select id="12" name="c"></select></li>
+			<li><span class="span1">作业批改最有效的老师：</span><select id="13" name="d"></select></li>
+			<li><span class="span1">讲课最生动有效的老师：</span><select id="14" name="e"></select></li>
+	
+		</ul>
+		<ul>
+			<li><span class="span1">课堂秩序最好的老师：</span><select id="15" name="f"></select></li>
+			<li><span class="span1">电子白板使用最好的老师：</span><select id="16" name="g"></select></li>
+			<li><span class="span1">是批评教育学生方法最得当的老师：</span><select id="17" name="h"></select></li>
+			<li><span class="span1">辅导学生最有耐心的老师：</span><select id="18" name="i"></select></li>
+			<li><span class="span1">板书最好看的老师：</span><select id="19" name="j"></select></li>	
+		</ul>
+		</div>
+		<div class="xiugai_sub">
+			<input type="button" value="修改" onclick="ming()">
+			<input type="reset" value="取消" >
+		</div>
+		</form>
+	</div>
+	<div class="mima" id="mima">
+		<form id='mimaf'>
+		<ul >
+			<li><span >原密码：</span><input type="password" name="old" id = "old"></li>
+			<li><span >新密码：</span><input type="password" name="new" id = "new"></li>
+			<li><span >再次输入：</span><input type="password" name="" id = "newagain"></li>
+		</ul>
+		<div class="xiugai_sub">
+			<input type="button" value="修改" onclick="mima()">
+			<input type="reset" value="取消" >
+		</div>
+		</form>
+	</div>
+</div>
+<!-- <div class="title">
+	<select id="xuenian" name="xuenian" class="form-control" onchange="change()">
+		<option>2019</option>
+		<option>2018</option>
+		<option>2017</option>
+		<option>2016</option>
+	</select>年
+	<select id="xueqi" name="xueqi" class="form-control" onchange="change()">
+		<option>春季</option>
+		<option>秋季</option>
+	</select>学期
+	<button class="chaxun" onclick="chaxun()">查询</button>
+</div> -->
+<!-- <div class="contant1">
+<table border="1">
+<thead>
+<tr>
+	<th>
+		 教师编号
+	</th>
+	<th>
+		 教师姓名
+	</th>
+	<th>
+		 课程
+	</th>
+	<th>
+		 是否已评教
+	</th>
+</tr>
+</thead>
+<tbody id="cbody">
+</tbody>	
+</table>
+</div> -->
+</body>
+<script type="text/javascript">
+var length //学生的老师数目
+var username //学生id
+var loaction //学生班级
+var teacher //老师的id
+var evaLength //评教问题格式
+var shijian = "" //当前学年学期
+var mingxing = []//该学生的授课老师
+var hasming = false;//学生是否给明星老师投票
+var hasEva = [] //标记评教老师
+jQuery(document).ready(function() {  
+ 	console.log("height:"+$(window).height()+"px;");
+    $(".all").attr("style","height:"+$(window).height()+"px;");
+	$("#guan").attr("value","张冰");
+	$("#guan").attr("size",3);//汉子长度*2-1，数字字母长度
+	$("#asd").css('visibility','hidden')
+	
+	$("#mima").hide()
+	$("#pingjiao").hide()
+	$("#mingxing").hide()
+    var str = location.search.split("?")
+    console.log(location.search)
+   /*  username = str[1] */
+    username = "zhanghao=3160212";
+	/* denglutai() */
+    /* loaction = "loaction=3*2" */
+	/* getContant(); */
+	getInfo()
+});
+//验证是否在评教时间内
+function getpjInfo(res){
+	var date = new Date();
+	var xueqi,xuenian
+	var year = date.getFullYear()
+	var month = date.getMonth()+1;
+	if(month > 2 && month < 9){
+		xueqi = "第2学期"
+		xuenian = year-1 + "-" + year;
+	}else {
+		xueqi = "第1学期"
+		if(month >= 9 && month <= 12){
+			var nian1 = year+1
+			xuenian = year + '-' + nian1;
+		}else {
+			xuenian = year-1 + "-" + year;
+		}
+	}
+	var riqi = date.toLocaleDateString().replace(/\//g,"-");
+	console.log(xuenian + " " + xueqi + " "+ riqi)
+	var data = "xuenian="+xuenian+"&xueqi="+xueqi+"&riqi="+riqi
+	shijian = "xuenian="+xuenian+"&xueqi="+xueqi;
+	$("#xn1").val(xuenian)
+	$("#xq1").val(xueqi)
+	$("#xn2").val(xuenian)
+	$("#xq2").val(xueqi)
+	console.log(data)
+	$.ajax({
+		url : "PingJiaoXinXi",
+		//同步方式
+		async : false,
+		data : data,
+		type : "post",
+		//指定请求成功后执行的回调函数
+		success : function(data) {
+			console.log(data)
+			if(data == "到评教时间"){
+				/* getteacher("xuenian="+xuenian+"&xueqi="+xueqi+"&"+username) */
+				if(res == 1){
+					getteacher(shijian + "&" + username)
+				}else if(res == 2){
+					getming()
+				}
+			}else{
+				alert(data)
+			}
+		}
+	})
+}
+//获得明星投票信息
+function getming(){
+	var data = shijian + "&" + username 
+	console.log(data)
+	$.ajax({
+		url : "MingXingXinXi",
+		//同步方式
+		async : false,
+		data : data,
+		type : "post",
+		//指定请求成功后执行的回调函数
+		success : function(res) {
+			var info = JSON.parse(res)
+			console.log(info)
+			if(info.length > 0){
+				for(var i=0; i < info.length ; i ++){
+					var option = "<option value='"+info[i][3]+"'>"+info[i][5]+"</option>" 
+					var j = i+10
+					$("#"+j).append(option)
+				}
+				hasming = true;
+			}else{
+				getteacher(data);
+			}
+		}
+	})
+}
+//获得评教信息
+function getping(){
+	if(mingxing[0][2] == "1"){
+		var data = "jiaogong="+mingxing[0][0] + "&" + shijian + "&" + username 
+		console.log(data)
+	 	$.ajax({
+			url : "DePingJiaoXinXi",
+			//同步方式
+			async : false,
+			data : data,
+			type : "post",
+			//指定请求成功后执行的回调函数
+			success : function(data) {
+				console.log(data)
+				var info = JSON.parse(data)
+				for(var i=0; i < info.length ; i ++){
+					var j = i+30
+					$("#"+j).val(info[i][5])
+				}
+			}
+		})
+	}
+}
+//切换教师显示评教信息
+function change(){
+	var jiaogonghao = $("#teacher").val()
+	console.log(jiaogonghao)
+	for(var i=0; i < mingxing.length ; i ++){
+		console.log(mingxing[i][0])
+		if(mingxing[i][0] == jiaogonghao){
+			console.log("asdasd")
+			if(mingxing[i][2] == "0"){
+				for(var k=0; k < 10 ; k ++){
+					var j = k+30
+					$("#"+j).val("A")
+				}
+			}else{
+				var data = "jiaogong="+mingxing[i][0] + "&" + shijian + "&" + username 
+				console.log(data)
+			 	$.ajax({
+					url : "DePingJiaoXinXi",
+					//同步方式
+					async : false,
+					data : data,
+					type : "post",
+					//指定请求成功后执行的回调函数
+					success : function(data) {
+						console.log(data)
+						var info = JSON.parse(data)
+						for(var k=0; k < info.length ; k ++){
+							var j = k+30
+							$("#"+j).val(info[k][5])
+						}
+					}
+				})
+			}
+			break;
+		}
+	}
+}
+//评教完毕，提交提示
+function submit1(){
+	var i = 0
+	for(var i = 0 ; i < hasEva.length ; i ++){
+		if(!hasEva[i]){
+			alert(mingxing[i][3]+"老师还没被评教")
+			return
+		}
+	}
+		alert("评教完毕")
+		$(location).attr('href','student.html?&'+student+"&"+loaction)
+}
+//写入学生评教
+function ping(){
+	var jiaogonghao = $("#teacher").val()
+	for(var i=0; i < mingxing.length ; i ++){
+		if(mingxing[i][0] == jiaogonghao){
+			if(hasEva[i]){
+				alert("该老师已被评教")
+				
+			}else{
+				var data = $("#contant").serialize();
+				data += "&" + shijian + "&" + username 
+				console.log(data)
+				$.ajax({
+					url : "XiePingJiaoDeFen",
+					//同步方式
+					async : false,
+					data : data,
+					type : "post",
+					//指定请求成功后执行的回调函数
+					success : function(data) {
+						console.log(data)
+						alert(data)
+						hasEva[i] = true
+					}
+				})
+			}
+			//如果是最后一位老师则不变
+			if(i < mingxing.length-1){
+				$("#teacher").val(mingxing[i+1][0])//自动切换下一位老师
+				change();
+			}
+			var bool = true
+			//检验是否所有老师都被评教
+			for(var t = 0 ; t < hasEva.length ; t++){
+				if(!hasEva[t]){
+					bool=false
+				}
+			}
+			if(bool){
+				alert("评教完成，请点击提交")
+			}
+			break;
+		}
+	}
+}
+
+//写入明星投票
+function ming(){
+	if(hasming){
+		alert("已经投票")
+	}else {
+		var data = $("#xiugai").serialize();
+		data += "&" + shijian + "&" + username 
+		console.log(data)
+		$.ajax({
+			url : "MingXingDeFen",
+			//同步方式
+			async : false,
+			data : data,
+			type : "post",
+			//指定请求成功后执行的回调函数
+			success : function(data) {
+				console.log(data)
+				alert(data)
+				if(data == "投票成功"){
+					hasming = true
+				}else{
+					hasming = false
+				}
+			}
+		})
+	}
+}
+//获得该学生的授课老师
+function getteacher(res){
+	console.log(res)
+	$.ajax({
+		url : "JiaoShengDuiYing",
+		//同步方式
+		async : false,
+		data : res,
+		type : "post",
+		//指定请求成功后执行的回调函数
+		success : function(data) {
+			console.log(data)
+			mingxing = JSON.parse(data)
+			console.log()
+			var option = ""
+			for(var i=0; i < mingxing.length ; i ++){
+				hasEva[i] = false
+				if(mingxing[i][2] == "1"){
+					hasEva[i] = true
+				}
+				option += "<option value='"+mingxing[i][0]+"'>"+mingxing[i][3]+"</option>" 
+			}
+			for(var i=10; i < 20 ; i ++){
+				$("#"+i).append(option)
+			}
+			$("#teacher").append(option)
+			console.log(hasEva)
+			getping()
+		}
+	})
+}
+
+function getInfo(){
+	$.ajax({
+		url : "XueShengXinXi",
+		//同步方式
+		async : false,
+		data : username,
+		type : "get",
+		//指定请求成功后执行的回调函数
+		success : function(data) {
+			console.log(data)
+			data = JSON.parse(data)
+			for(i=1; i <= data.length ; i ++){
+				$("#"+i).val(data[i-1])
+			}
+		}
+	})
+}
+function mima(){
+    if($("#new").val() == $("#newagain").val()){
+    	var data = $("#mimaf").serialize()
+    	console.log(data)
+    	var data = data + "&" + username + "&leixing=XueShengBiao"
+    	console.log(data)
+        $.ajax({
+    		url : "XiuGaiMiMa",
+    		//同步方式
+    		async : false,
+    		data : data,
+    		type : "post",
+    		//指定请求成功后执行的回调函数
+    		success : function(data) {
+    			alert(data)
+    		}
+    	})
+    }else{
+    	alert("两次密码不一致，请重新输入")
+    }
+	
+}
+function denglutai(){
+	$.ajax({
+		url : "DengLuTai",
+		//同步方式
+		async : false,
+		data : username+"&LeiXing=XueSheng",
+		type : "get",
+		//指定请求成功后执行的回调函数
+		success : function(data) {
+			if(data == "false"){
+				$(location).attr("href","login.html")
+			}
+		}
+	})
+}
+function xuanze(res){
+	console.log(res)
+	if(res == "pingjiao"){
+		$("#pingjiao").show();
+		$("#info").hide();
+		$("#mima").hide();
+		$("#mingxing").hide();
+		getpjInfo(1);
+	}else if(res == "info"){
+		$("#info").show();
+		$("#pingjiao").hide();
+		$("#mingxing").hide();
+		$("#mima").hide();
+	}else if(res == "mingxing"){
+		$("#info").hide();
+		$("#pingjiao").hide();
+		$("#mingxing").show();
+		$("#mima").hide();
+		getpjInfo(2)
+	}else if(res == "mima"){
+		$("#info").hide();
+		$("#pingjiao").hide();
+		$("#mingxing").hide();
+		$("#mima").show();
+	}
+}
+function chaxun(){
+	$("#cbody").empty();
+	var xuenian = $("#xuenian").val();
+	var xueqi = $("#xueqi").val();
+	var data = username + "&xuenian=" + xuenian + "&xueqi=" + xueqi;
+	console.log(data)
+	$.ajax({
+		url : "student",
+		//同步方式
+		async : false,
+		data : data,
+		type : "get",
+		//指定请求成功后执行的回调函数
+		success : function(data) {
+			console.log(data)
+			k = JSON.parse(data)
+			for(i=0; i < k.length ; i ++){
+				var tr = "<tr class="+i+">";
+				tr += "<td align='center'>"+k[i].JBianHao+"</td>";
+				tr += "<td align='center' onclick='pingjiao("+k[i].JBianHao+")')>"+k[i].JXingMing+"</td>";
+				tr += "<td align='center'>"+k[i].KeCheng+"</td>";
+				tr += "<td align='center'>"+k[i].PingJiao+"</td>";
+				tr += "</tr>";
+				$("#cbody").append(tr);
+			}
+		}
+	});
+}
+function pingjiao(res){
+	console.log(res)
+	/* $('.contant').css('visibility','visible'); */
+	$('.contant').hide();
+}
+/* 
+function chan(i){
+	console.log(i)
+	if(hasEva[i]){
+		for(var j=0;j < evaLength; j ++){
+		  $(".grade"+j).val(Grade[i][j])
+		}
+	}else {
+		for(var j=0;j < evaLength; j ++){
+			  $(".grade"+j).val("100")
+			}
+	}
+}
+function change(){
+	i = $("#teacher").val()
+	console.log(hasEva[i])
+	if(hasEva[i]){
+		for(var j=0;j < evaLength; j ++){
+		  $(".grade"+j).val(Grade[i][j])
+		}
+	}else {
+		for(var j=0;j < evaLength; j ++){
+			  $(".grade"+j).val("100")
+			}
+	}
+}
+function save(){
+	var i = parseInt($("#teacher").val()) +1
+	console.log($("#teacher").val())
+	if(i<=length){
+	 if(i != length){
+	    $("#teacher").val(i)
+	 }
+	var data = $("#contant").serialize()
+	data = data + "&evaLength=" +evaLength+"&"+loaction + "&" + student;
+	data = data + "&teacher=" + teacher[i-1].teacher
+	$.ajax({
+		url : "studentEva",
+		//同步方式
+		async : false,
+		data : data,
+		type : "get",
+		//指定请求成功后执行的回调函数
+		success : function(data) {
+			
+			if(data == "已经评教，请勿再次评教" && i == length){
+				alert("评教完毕，请点击提交")
+			}else{
+				if(data == "已经评教，请勿再次评教"){
+					alert(data)
+					chan(i)
+				}else{
+					alert("评教成功")
+					//给当前老师改变值
+					hasEva[i-1] = true
+					Grade[i-1] = data.split("+")
+					//判断下一位老师是否已被评教
+					if(i == length){
+						chan(i-1)//最后一个的话，i+1会越界，所以在chan函数值会永远判断为假，i-1则为本身
+					}else{
+						chan(i)
+					}
+				}
+				
+			}
+		},
+		error : function() {
+			alert("error");
+		}
+	});
+	console.log(hasEva)
+	}else{
+		alert("评教完毕，请点击提交")
+	}
+}
+function getContant(){
+	$.ajax({
+		url : "student",
+		//同步方式
+		async : false,
+		data : "student=1",
+		type : "get",
+		//指定请求成功后执行的回调函数
+		success : function(data) {
+			console.log(data)
+			k = JSON.parse(data)
+			teacher = k
+			length = k.length
+		    for(var i = 0 ; i < k.length ; i ++){
+				console.log(i)
+				var option = "<option value='"+i+"'>"+k[i].student+"</option>"
+				$("#teacher").append(option)
+				$.ajax({
+					url : "getEva",
+					//同步方式
+					async : false,
+					data : "teacher="+k[i].teacher+"&student=1",
+					type : "get",
+					//指定请求成功后执行的回调函数
+					success : function(data) {
+						console.log(data)
+						if(data == "未评价"){
+							Grade[i] = 100;
+							hasEva[i] = false
+						}else{
+							var k = JSON.parse(data)
+							Grade[i] = k.grade.split("+")
+							hasEva[i] = true
+						}
+					},
+					error : function() {
+						alert("error");
+					}
+				});
+			} 
+			console.log(Grade)
+			console.log(hasEva)
+		},
+		error : function() {
+			alert("error");
+		}
+	});
+	 $.ajax({
+		url : "manager",
+		//同步方式
+		async : false,
+		type : "get",
+		//指定请求成功后执行的回调函数
+		success : function(data) {
+			var k = JSON.parse(data)
+			var contant = k.contant.split("+")
+			var grade = k.grade.split("+");
+			evaLength = contant.length-1
+			for(i=0; i < contant.length-1 ; i ++){
+				var tr = "<tr class="+i+">";
+				tr += "<td><input type='text' class='buyInput' name='contant"+i+"' onblur='checked()' value='"+contant[i]+"'></td>";
+				tr += "<td><select name='grade"+i+"' class='grade"+i+"'>";
+				tr += "<option value='100'>100</option>";
+				tr += "<option value='80'>80</option>";
+				tr += "<option value='60'>60</option>";
+				tr += "<option value='40'>40</option>";
+				tr += "<option value='20'>20</option>";
+				tr +="</select></td>";
+				tr += "</tr>";
+				$("#cbody").append(tr);
+				//显示已评教老师分数
+				if(hasEva[0]){
+					console.log(Grade[0])
+					$(".grade"+i).val(Grade[0][i])
+				}else {
+				  $(".grade"+i).val("100")
+				} 
+			}
+		},
+		error : function() {
+			alert("error");
+		}
+	});
+} */
+</script>
+</html>

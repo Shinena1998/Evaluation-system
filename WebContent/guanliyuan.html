@@ -1,0 +1,2119 @@
+<!DOCTYPE html>
+<!-- 
+Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.4
+Version: 4.0
+Author: KeenThemes
+Website: http://www.keenthemes.com/
+Contact: support@keenthemes.com
+Follow: www.twitter.com/keenthemes
+Like: www.facebook.com/keenthemes
+Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
+-->
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+<meta charset="utf-8"/>
+<title>Metronic | Form Stuff - Material Design Form Controls</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta content="" name="description"/>
+<meta content="" name="author"/>
+<script src="livecss.js" type="text/javascript"></script>
+<!-- BEGIN GLOBAL MANDATORY STYLES -->
+<link href="assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+<link href="assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+<link href="assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css"/>
+<!-- END GLOBAL MANDATORY STYLES -->
+<!-- BEGIN THEME STYLES -->
+<link href="assets/global/css/components.css" id="style_components" rel="stylesheet" type="text/css"/>
+<link href="assets/global/css/plugins.css" rel="stylesheet" type="text/css"/>
+<link href="assets/admin/layout/css/layout.css" rel="stylesheet" type="text/css"/>
+<link id="style_color" href="assets/admin/layout/css/themes/darkblue.css" rel="stylesheet" type="text/css"/>
+<link href="assets/admin/layout/css/custom.css" rel="stylesheet" type="text/css"/>
+<!-- END THEME STYLES -->
+<link rel="shortcut icon" href="favicon.ico"/>
+</head>
+<style>
+.name{
+	background:none;
+	border:0px;
+	padding:0px;
+	font-weight:bloder;
+}
+.name2{
+	background:none;
+}
+.title{
+	min-height:20px
+}
+td{
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center;
+}
+#lineTd {
+ background: #fff url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxsaW5lIHgxPSIwIiB5MT0iMCIgeDI9IjEwMCUiIHkyPSIxMDAlIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=) no-repeat 100% center;   
+}
+</style>
+<body class="page-header-fixed page-quick-sidebar-over-content ">
+<!-- BEGIN HEADER -->
+<div class="page-header navbar navbar-fixed-top">
+	<!-- BEGIN HEADER INNER -->
+	<div class="page-header-inner">
+		<!-- BEGIN LOGO -->
+		<div class="page-logo">
+			<a href="index.html">
+			<img src="assets/admin/layout/img/logo.png" alt="logo" class="logo-default"/>
+			</a>
+			<div class="menu-toggler sidebar-toggler hide">
+				<!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+			</div>
+		</div>
+		<!-- END LOGO -->
+		<!-- BEGIN RESPONSIVE MENU TOGGLER -->
+		<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+		</a>
+		<!-- END RESPONSIVE MENU TOGGLER -->
+		<!-- BEGIN TOP NAVIGATION MENU -->
+		<div class="top-menu">
+			<ul class="nav navbar-nav pull-right">
+				<!-- BEGIN NOTIFICATION DROPDOWN -->
+				<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+				
+				<!-- END TODO DROPDOWN -->
+				<!-- BEGIN USER LOGIN DROPDOWN -->
+				<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+				<li class="dropdown dropdown-user">
+					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+					<!-- <span class="username username-hide-on-mobile">
+					Nick </span> -->
+					<input type="text" value="" readonly size="" class="name username username-hide-on-mobile" id="guan">
+					</a>
+				</li>
+				<!-- END USER LOGIN DROPDOWN -->
+				<!-- BEGIN QUICK SIDEBAR TOGGLER -->
+				<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+				<li class="dropdown dropdown-quick-sidebar-toggler">
+					<a href="javascript:;" class="dropdown-toggle" id="exit">
+					<i class="icon-logout"></i>
+					</a>
+				</li>
+				<!-- END QUICK SIDEBAR TOGGLER -->
+			</ul>
+		</div>
+		<!-- END TOP NAVIGATION MENU -->
+	</div>
+	<!-- END HEADER INNER -->
+</div>
+<!-- END HEADER -->
+<div class="clearfix">
+</div>
+<!-- BEGIN CONTAINER -->
+<div class="page-container">
+	<!-- BEGIN SIDEBAR -->
+	<div class="page-sidebar-wrapper">
+		<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+		<!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+		<div class="page-sidebar navbar-collapse collapse">
+			<!-- BEGIN SIDEBAR MENU -->
+			<!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+			<!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+			<!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+			<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+			<!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+			<!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+			<ul class="page-sidebar-menu" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+				<!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
+				<li class="sidebar-toggler-wrapper">
+					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+					<div class="sidebar-toggler">
+					</div>
+					<!-- END SIDEBAR TOGGLER BUTTON -->
+				</li>
+				<!-- DOC: To remove the search box from the sidebar you just need to completely remove the below "sidebar-search-wrapper" LI element -->
+				<li class="sidebar-search-wrapper">
+					<!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
+					<!-- DOC: Apply "sidebar-search-bordered" class the below search form to have bordered search box -->
+					<!-- DOC: Apply "sidebar-search-bordered sidebar-search-solid" class the below search form to have bordered & solid search box -->
+					<form class="sidebar-search " action="extra_search.html" method="POST">
+						<a href="javascript:;" class="remove">
+						<i class="icon-close"></i>
+						</a>
+						<div class="input-group">
+						</div>
+					</form>
+					<!-- END RESPONSIVE QUICK SEARCH FORM -->
+				</li>
+				<li class="start ">
+					<a href="javascript:;">
+					<i class="icon-home"></i>
+					<span class="title">设置评教</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">
+						<li onclick="qiehuan('chakan')">
+							<a href="#w1">
+							<i class="icon-bar-chart"></i>
+							当前设置</a>
+						</li>
+						<li onclick="qiehuan('pingjiao')">
+							<a href="#w1">
+							<i class="icon-bar-chart"></i>
+							设置时间</a>
+						</li>
+					</ul>
+				</li>
+				<li class="start ">
+					<a href="javascript:;">
+					<i class="icon-paper-plane"></i>
+					<span class="title">管理教工</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">
+						<li  onclick="qiehuan('tianjia')">
+							<a href="#">
+							<i class="icon-bar-chart"></i>
+							添加教工</a>
+						</li>
+						<li  onclick="qiehuan('xiugai')">
+							<a href="#">
+							<i class="icon-bulb"></i>
+							修改教工信息</a>
+						</li>
+						<li  onclick="qiehuan('shanchu')">
+							<a href="#">
+							<i class="icon-graph"></i>
+							删除教工</a>
+						</li>
+					</ul>
+				</li>
+				<li class="start ">
+					<a href="javascript:;">
+					<i class="icon-paper-plane"></i>
+					<span class="title">结果管理</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">
+						<li  onclick="qiehuan('pjpaiming')">
+							<a href="#">
+							<i class="icon-bar-chart"></i>
+							评教排名</a>
+						</li>
+						<li  onclick="qiehuan('geren')">
+							<a href="#">
+							<i class="icon-bulb"></i>
+							明星评选结果</a>
+						</li>
+						<li  onclick="qiehuan('mxpaiming')">
+							<a href="#">
+							<i class="icon-bulb"></i>
+							明星结果排名</a>
+						</li>
+						<li  onclick="qiehuan('xzpaiming')">
+							<a href="#">
+							<i class="icon-bulb"></i>
+							行政结果排名</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<!-- END SIDEBAR MENU -->
+		</div>
+	</div>
+	<!-- END SIDEBAR -->
+	<!-- BEGIN CONTENT -->
+	<div class="page-content-wrapper" >
+		<div class="page-content">
+			<!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+			<div class="modal fade" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+							<h4 class="modal-title">Modal title</h4>
+						</div>
+						<div class="modal-body">
+							 Widget settings form goes here
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn blue">Save changes</button>
+							<button type="button" class="btn default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal-dialog -->
+			</div>
+			<!-- /.modal -->
+			<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+			<!-- BEGIN STYLE CUSTOMIZER -->
+			
+			<!-- END STYLE CUSTOMIZER -->
+			<!-- BEGIN PAGE HEADER-->
+			<h3 class="page-title">
+			考评管理系统<small>一个专注于考评的系统</small>
+			</h3>
+			<div class="page-bar">
+				<ul class="page-breadcrumb">
+					<li>
+						<i class="fa fa-home"></i>
+						<a href="#">考评管理系统</a>
+						<i class="fa fa-angle-right"></i>
+					</li>
+					<li>
+						<a href="#">管理员端</a>
+					</li>
+				</ul>
+			</div>
+			<!-- END PAGE HEADER-->
+			<!-- BEGIN PAGE CONTENT-->
+			<div class="row" id="chakan">
+				<div class="col-md-12">
+					<!-- BEGIN VALIDATION STATES-->
+					<div class="portlet box purple">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-gift"></i>当前设置
+							</div>
+							<div class="tools">
+							</div>
+						</div>
+						<div class="portlet-body form">
+							<!-- BEGIN FORM-->
+							<form class="form-horizontal">
+								<div class="form-body">
+									<div class="alert alert-danger display-hide">
+										<button class="close" data-close="alert"></button>
+										You have some form errors. Please check below.
+									</div>
+									<div class="alert alert-success display-hide">
+										<button class="close" data-close="alert"></button>
+										Your form validation is successful!
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">当前学年<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<input type="text"  readonly name="dangqianxuenian" id="dangqianxuenian1" value=""  class="form-control"/>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">当前学期<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<input type="text" readonly name="dangqianxueqi" id="dangqianxueqi1" value=""  class="form-control"/>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">学年<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<input class="form-control" readonly name="xuenian" id="xuenian1" />
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">学期<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<input class="form-control" readonly name="xueqi" id="xueqi1" />
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">开始时间<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<input name="start" id="start1" readonly type="date" class="form-control"/>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">结束时间<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<input name="end" id="end1" readonly  type="date" class="form-control"/>
+										</div>
+									</div>
+								</div>
+							</form>
+							<!-- END FORM-->
+						</div>
+					</div>
+					<!-- END VALIDATION STATES-->
+				</div>
+			</div>
+			<div class="row" id="pingjiaod">
+				<div class="col-md-12">
+					<!-- BEGIN VALIDATION STATES-->
+					<div class="portlet box purple">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-gift"></i>设置时间
+							</div>
+							<div class="tools">
+							</div>
+						</div>
+						<div class="portlet-body form">
+							<!-- BEGIN FORM-->
+							<form action="#" id="pingjiao" class="form-horizontal">
+								<div class="form-body">
+									<div class="alert alert-danger display-hide">
+										<button class="close" data-close="alert"></button>
+										You have some form errors. Please check below.
+									</div>
+									<div class="alert alert-success display-hide">
+										<button class="close" data-close="alert"></button>
+										Your form validation is successful!
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">当前学年<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select  name="dangqianxuenian" id="dangqianxuenian"  class="form-control">
+												<option value=""></option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">当前学期<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" name="dangqianxueqi" id="dangqianxueqi">
+												<option value=""></option>
+												<option value="第1学期">第1学期</option>
+												<option value="第2学期">第2学期</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">学年<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" name="xuenian" id="xuenian">
+												<option value=""></option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">学期<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" name="xueqi" id="xueqi">
+												<option value=""></option>
+												<option value="第1学期">第1学期</option>
+												<option value="第2学期">第2学期</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">开始时间<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<input name="start" id="guan" type="date" class="form-control"/>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">结束时间<span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<input name="end" id="guan"  type="date" class="form-control"/>
+										</div>
+									</div>
+								</div>
+								<div class="form-actions">
+									<div class="row">
+										<div class="col-md-offset-3 col-md-9">
+											<button type="button" class="btn green" onclick="submit1()">提交</button>
+											<button type="reset" class="btn default">取消</button>
+										</div>
+									</div>
+								</div>
+							</form>
+							<!-- END FORM-->
+						</div>
+					</div>
+					<!-- END VALIDATION STATES-->
+				</div>
+			</div>
+			<!-- END PAGE CONTENT-->
+			<div class="row" id="tianjiad">
+				<div class="col-md-12">
+					<div class="tabbable-line boxless tabbable-reversed">
+						<div class="tab-content">
+							<div class="tab-pane active" id="tab_0">
+								<div class="portlet box yellow">
+									<div class="portlet-title">
+										<div class="caption">
+											<i class="fa fa-gift"></i>添加教工
+										</div>
+									</div>
+									<div class="portlet-body form">
+										<!-- BEGIN FORM-->
+										<form id="tianjia" class="form-horizontal">
+											<div class="form-actions top">
+											</div>
+											<div class="form-body">
+												<div class="form-group">
+													<label class="col-md-3 control-label">教工号</label>
+													<div class="col-md-4">
+														<div class="input-group">
+															<input type="text" class="form-control" placeholder="" name="jiaogonghao" id="username">
+															<span class="input-group-addon">
+															<i class="fa fa-user"></i>
+															</span>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-3 control-label">姓名</label>
+													<div class="col-md-4">
+														<div class="input-group">
+															<input type="text" class="form-control"  name="xingming">
+															<span class="input-group-addon">
+															<i class="fa fa-user"></i>
+															</span>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-3 control-label">密码</label>
+													<div class="col-md-4">
+														<div class="input-group">
+															<input type="text" class="form-control" name="mima" placeholder="不填密码则随机生成">
+															<span class="input-group-addon">
+															<i class="fa fa-user"></i>
+															</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-actions fluid">
+												<div class="row">
+													<div class="col-md-offset-3 col-md-9">
+														<button type="button" class="btn green" onclick="submit2()">添加</button>
+														<button type="reset" class="btn default">取消</button>
+													</div>
+												</div>
+											</div>
+										</form>
+										<!-- END FORM-->
+									</div>
+								</div>
+								
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row" id="xiugaid">
+				<div class="col-md-6 ">
+					<!-- BEGIN SAMPLE FORM PORTLET-->
+					<div class="portlet light bordered">
+						<div class="portlet-title">
+							<div class="caption font-red-sunglo">
+								<i class="icon-settings font-red-sunglo">
+								</i>
+								<span>修改信息</span>
+							</div>
+							<div class="actions">
+								
+							</div>
+						</div>
+						<div class="portlet-body form">
+							<form role="form1" id="form1">
+								<div class="form-body">
+									<div class="form-group form-md-line-input">
+										<input type="text" class="form-control"  id="1" name="1" >
+										<label for="form_control_1">教工号</label>
+									</div>
+									<div class="form-group form-md-line-input">
+										<input type="text" class="form-control"  id="2" name="2" >
+										<label for="form_control_1">姓名</label>
+									</div>
+									<div class="form-group form-md-line-input" id="mima">
+										<input type="text" class="form-control"  id="3" name="3" >
+										<label for="form_control_1">密码</label>
+									</div>
+									<div class="form-group form-md-line-input has-info">
+										<input type="text" class="form-control"  id="4" name="4">
+										<label for="form_control_1">性别</label>
+									</div>
+									<div class="form-group form-md-line-input has-info">
+										<input type="text" class="form-control"  id="5" name="5">
+										<label for="form_control_1">出生日期</label>
+									</div>
+									<div class="form-group form-md-line-input has-info">
+										<input type="text" class="form-control"   id="6"  name="6">
+										<label for="form_control_1">最高学历</label>
+									</div>
+									<div class="form-group form-md-line-input has-info">
+										<input type="text" class="form-control"  id="7"  name="7">
+										<label for="form_control_1">职称</label>
+									</div>
+									<div class="form-group form-md-line-input has-info">
+										<input type="text" class="form-control"  id="8"  name="8">
+										<label for="form_control_1">身份证号</label>
+									</div>
+									<div class="form-group form-md-line-input has-info">
+										<input type="text" class="form-control"  id="9"  name="9">
+										<label for="form_control_1">学科科目</label>
+									</div>
+									<div class="form-group form-md-line-input has-info">
+										<input type="text" class="form-control"  id="10"  name="10">
+										<label for="form_control_1">入校日期</label>
+									</div>
+									<div class="form-group form-md-line-input has-info" id="bumen">
+										<select class='form-control' id='11' name='11'>
+											<option></option>
+											<option value='高中'>高中 </option>
+											<option value='初中'>初中</option>
+											<option value='小学'>小学</option>
+										</select>
+										<label for="form_control_1">部门</label>
+									</div>
+									<div class="form-group form-md-line-input has-info" id="leibie">
+										<select class='form-control' id='12' name='12'>
+											<option></option>
+											<option value='档案类'>档案类 </option>
+											<option value='非档案类'>非档案类</option>
+											<option value='政府'>政府</option>
+										</select>
+										<label for="form_control_1">类别</label>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<!-- END SAMPLE FORM PORTLET-->
+					<!-- BEGIN SAMPLE FORM PORTLET-->
+					<!-- END SAMPLE FORM PORTLET-->
+				</div>
+				<div class="col-md-6 ">
+					<!-- BEGIN SAMPLE FORM PORTLET-->
+					<div class="portlet light bordered">
+						<div class="portlet-title">
+							<div class="caption font-red-sunglo">
+								<i class="icon-settings font-red-sunglo"></i>
+								<span>修改信息</span>
+							</div>
+							<div class="actions">
+								
+							</div>
+						</div>
+						<div class="portlet-body form">
+							<form role="form2" id="form2">
+								<div class="form-body">
+									<div class="form-group form-md-line-input has-info" id="zhibie">
+										<select class='form-control' id='13' name='13'>
+											<option></option>
+											<option value='教师'>教师 </option>
+											<option value='行政'>行政</option>
+											<option value='教师兼任行政'>教师兼任行政</option>
+										</select>
+										<label for="form_control_1">职别</label>
+									</div>
+									<div class="form-group form-md-line-input has-info" id="beike"> 
+										<select class='form-control' id="14" name="14">
+											<option></option>
+											<option value='1'>是 </option>
+											<option value='0'>否</option>
+										</select>
+										<label for="form_control_1">是否备课组长</label>
+									</div>
+									<div class="form-group form-md-line-input has-info" id="nianji" >
+										<select class='form-control' id="15" name="15">
+											<option></option>
+											<option value='1'>是 </option>
+											<option value='0'>否</option>
+										</select>
+										<label for="form_control_1">是否年级主任</label>
+									</div>
+									<div class="form-group form-md-line-input has-info" id="jiaoyan" >
+										<select class='form-control' id="16" name="16">
+											<option></option>
+											<option value='1'>是 </option>
+											<option value='0'>否</option>
+										</select>
+										<label for="form_control_1">是否教研组长</label>
+									</div>
+									<div class="form-group form-md-line-input has-info">
+										<input type="text" class="form-control" id="17"  name="17">
+										<label for="form_control_1">最高学历学校</label>
+									</div>
+									<div class="form-group form-md-line-input has-info">
+										<input type="text" class="form-control" id="18"  name="18">
+										<label for="form_control_1">最高学历专业</label>
+									</div>
+									<div class="form-group form-md-line-input has-info">
+										<input type="text" class="form-control" id="19"  name="19">
+										<label for="form_control_1">手机</label>
+									</div>
+									<div class="form-group form-md-line-input has-info">
+										<input type="text" class="form-control" id="20"  name="20">
+										<label for="form_control_1">邮箱</label>
+									</div>
+									<div class="form-group form-md-line-input has-info">
+										<input type="text" class="form-control"  id="21"  name="21">
+										<label for="form_control_1">微信</label>
+									</div>
+									<div class="form-group form-md-line-input has-info">
+										<input type="text" class="form-control"   id="22" name="22">
+										<label for="form_control_1">QQ</label>
+									</div>
+								</div>
+								<div class="form-actions noborder" id="tijiao">
+									<button type="button" class="btn blue" onclick="submit3()">提交</button>
+									<button type="button" class="btn default">取消</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<!-- END SAMPLE FORM PORTLET-->
+					<!-- BEGIN SAMPLE FORM PORTLET-->
+					<!-- END SAMPLE FORM PORTLET-->
+				</div>
+			</div>
+			<div class="row" id="shanchud">
+				<div class="col-md-6 ">
+					<!-- BEGIN SAMPLE FORM PORTLET-->
+					<div class="portlet light bordered">
+						<div class="portlet-title">
+							<div class="caption font-red-sunglo">
+								<i class="icon-settings font-red-sunglo">
+								</i>
+								<span>删除教工</span>
+							</div>
+							<div class="actions">
+								
+							</div>
+						</div>
+						<div class="portlet-body form">
+							<form role="form1" id="form3">
+								<div class="form-body">
+									<div class="form-group form-md-line-input">
+										<input type="text" class="form-control"  id="31" name="1" >
+										<label for="form_control_1">教工号</label>
+									</div>
+									<div class="form-group form-md-line-input">
+										<input type="text" class="form-control"  id="32" name="2" >
+										<label for="form_control_1">姓名</label>
+									</div>
+									<div class="form-group form-md-line-input" id="mima">
+										<input type="text" class="form-control"  id="33" name="3" >
+										<label for="form_control_1">密码</label>
+									</div>
+									<div class="form-group form-md-line-input has-info">
+										<input type="text" class="form-control"  id="34" name="4">
+										<label for="form_control_1">性别</label>
+									</div>
+									<div class="form-group form-md-line-input has-info">
+										<input type="text" class="form-control"  id="35" name="5">
+										<label for="form_control_1">出生日期</label>
+									</div>
+									<div class="form-group form-md-line-input has-info">
+										<input type="text" class="form-control"   id="36"  name="6">
+										<label for="form_control_1">最高学历</label>
+									</div>
+									<div class="form-group form-md-line-input has-info">
+										<input type="text" class="form-control"  id="37"  name="7">
+										<label for="form_control_1">职称</label>
+									</div>
+									<div class="form-group form-md-line-input has-info">
+										<input type="text" class="form-control"  id="38"  name="8">
+										<label for="form_control_1">身份证号</label>
+									</div>
+									<div class="form-group form-md-line-input has-info">
+										<input type="text" class="form-control"  id="39"  name="9">
+										<label for="form_control_1">学科科目</label>
+									</div>
+									<div class="form-group form-md-line-input has-info">
+										<input type="text" class="form-control"  id="40"  name="10">
+										<label for="form_control_1">入校日期</label>
+									</div>
+									<div class="form-group form-md-line-input has-info" id="bumen">
+										<select class='form-control' id='11' name='41'>
+											<option></option>
+											<option value='高中'>高中 </option>
+											<option value='初中'>初中</option>
+											<option value='小学'>小学</option>
+										</select>
+										<label for="form_control_1">部门</label>
+									</div>
+									<div class="form-group form-md-line-input has-info" id="leibie">
+										<select class='form-control' id='12' name='42'>
+											<option></option>
+											<option value='档案类'>档案类 </option>
+											<option value='非档案类'>非档案类</option>
+											<option value='政府'>政府</option>
+										</select>
+										<label for="form_control_1">类别</label>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<!-- END SAMPLE FORM PORTLET-->
+					<!-- BEGIN SAMPLE FORM PORTLET-->
+					<!-- END SAMPLE FORM PORTLET-->
+				</div>
+				<div class="col-md-6 ">
+					<!-- BEGIN SAMPLE FORM PORTLET-->
+					<div class="portlet light bordered">
+						<div class="portlet-title">
+							<div class="caption font-red-sunglo">
+								<i class="icon-settings font-red-sunglo"></i>
+								<span>修改信息</span>
+							</div>
+							<div class="actions">
+								
+							</div>
+						</div>
+						<div class="portlet-body form">
+							<form role="form2" id="form4">
+								<div class="form-body">
+									<div class="form-group form-md-line-input has-info" id="zhibie">
+										<select class='form-control' id='13' name='43'>
+											<option></option>
+											<option value='教师'>教师 </option>
+											<option value='行政'>行政</option>
+											<option value='教师兼任行政'>教师兼任行政</option>
+										</select>
+										<label for="form_control_1">职别</label>
+									</div>
+									<div class="form-group form-md-line-input has-info" id="beike"> 
+										<select class='form-control' id="14" name="44">
+											<option></option>
+											<option value='1'>是 </option>
+											<option value='0'>否</option>
+										</select>
+										<label for="form_control_1">是否备课组长</label>
+									</div>
+									<div class="form-group form-md-line-input has-info" id="nianji" >
+										<select class='form-control' id="15" name="45">
+											<option></option>
+											<option value='1'>是 </option>
+											<option value='0'>否</option>
+										</select>
+										<label for="form_control_1">是否年级主任</label>
+									</div>
+									<div class="form-group form-md-line-input has-info" id="jiaoyan" >
+										<select class='form-control' id="16" name="46">
+											<option></option>
+											<option value='1'>是 </option>
+											<option value='0'>否</option>
+										</select>
+										<label for="form_control_1">是否教研组长</label>
+									</div>
+									<div class="form-group form-md-line-input has-info">
+										<input type="text" class="form-control" id="47"  name="17">
+										<label for="form_control_1">最高学历学校</label>
+									</div>
+									<div class="form-group form-md-line-input has-info">
+										<input type="text" class="form-control" id="48"  name="18">
+										<label for="form_control_1">最高学历专业</label>
+									</div>
+									<div class="form-group form-md-line-input has-info">
+										<input type="text" class="form-control" id="49"  name="19">
+										<label for="form_control_1">手机</label>
+									</div>
+									<div class="form-group form-md-line-input has-info">
+										<input type="text" class="form-control" id="50"  name="20">
+										<label for="form_control_1">邮箱</label>
+									</div>
+									<div class="form-group form-md-line-input has-info">
+										<input type="text" class="form-control"  id="51"  name="21">
+										<label for="form_control_1">微信</label>
+									</div>
+									<div class="form-group form-md-line-input has-info">
+										<input type="text" class="form-control"   id="52" name="22">
+										<label for="form_control_1">QQ</label>
+									</div>
+								</div>
+								<div class="form-actions noborder" id="tijiao">
+									<button type="button" class="btn blue" id="shanchu">删除</button>
+									<button type="button" class="btn default">取消</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<!-- END SAMPLE FORM PORTLET-->
+					<!-- BEGIN SAMPLE FORM PORTLET-->
+					<!-- END SAMPLE FORM PORTLET-->
+				</div>
+			</div>
+			<div class="row" id="pjpaiming">
+				<div class="col-md-12">
+					<!-- BEGIN SAMPLE TABLE PORTLET-->
+					<div class="portlet box blue">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-comments"></i>
+								<select id="xuenian11" class="name"></select>学年
+								<select id="xueqi11" class="name">
+									<option value="第1学期">第1学期</option>
+									<option value="第2学期">第2学期</option>
+								</select>教师测评表(
+								<select id="bumen11" class="name" onchange="selectChange('bumen11','nianji11')">
+									<option value="高中">高中</option>
+									<option value="初中">初中</option>
+									<option value="小学">小学</option>
+								</select>部
+								<select id="nianji11" class="name">
+									<option value='1'>一</option>
+									<option value='2'>二</option>
+									<option value='3'>三</option>
+								</select>年级)
+							</div>
+							<div class="tools">
+								<button class="name2" onclick="zonghepaiming()">查询</button>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="table-scrollable">
+								<table class="table table-bordered  table-hover">
+								<thead>
+								<tr>
+									<th>
+										
+									</th>
+									<th id="lineTd" colspan="2">
+										    <span style="float:left;">教师</span>
+										    <span style="float:right;margin-top:-20px">项目</span>
+									</th>
+									<th>
+										 讲课<br>很明白
+									</th>
+									<th>
+										 辅导<br>有耐心
+									</th>
+									<th>
+										 板书<br>很美观
+									</th>
+									<th>
+										 上课<br>我喜欢
+									</th>
+									<th>
+										 检测<br>有反应
+									</th>
+									<th>
+										作业<br>很适度
+									</th>
+									<th>
+										作业<br>都批改
+									</th>
+									<th>
+										老师<br>关心我
+									</th>
+									<th>
+										我爱<br>老师
+									</th>
+									<th>
+										家长<br>满意
+									</th>
+									<th colspan="3" style='display:table-cell; vertical-align:middle;text-align:center'>
+										学生综合评定
+									</th>
+									<th colspan="3" style='display:table-cell; vertical-align:middle;text-align:center'>
+										上级测评 
+									</th>
+									<th colspan="3" style='display:table-cell; vertical-align:middle;text-align:center'>
+										个人量化
+									</th>
+									<th rowspan="2">
+										三项<br>综合<br>总分
+									</th>
+									<th rowspan="2">
+										排<br>序
+									</th>
+									<th rowspan="2">
+										百<br>分<br>位
+									</th>
+									<th rowspan="2">
+										拟<br>定<br>等<br>级
+									</th>
+								</tr>
+								<tr>
+									<th>
+										序号
+									</th>
+									<th>
+										姓名
+									</th>
+									<th>
+										科目
+									</th>
+									<th>
+										总分1
+									</th>
+									<th>
+										总分2
+									</th>
+									<th>
+										总分3
+									</th>
+									<th>
+										总分4
+									</th>
+									<th>
+										总分5
+									</th>
+									<th>
+										总分6
+									</th>
+									<th>
+										总分7
+									</th>
+									<th>
+										总分8
+									</th>
+									<th>
+										总分9
+									</th>
+									<th>
+										总分10
+									</th>
+									<th>
+										总分和
+									</th>
+									<th>
+										位次
+									</th>
+									<th>
+										百分位
+									</th>
+									<th>
+										总分
+									</th>
+									<th>
+										位次
+									</th>
+									<th>
+										百分位
+									</th>
+									
+									<th>
+										总分
+									</th>
+									<th>
+										位次
+									</th>
+									<th>
+										百分位
+									</th>
+								</tr>
+								</thead>
+								<tbody id="zonghebody">
+								
+								</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- END SAMPLE TABLE PORTLET-->
+				</div>
+			</div>
+			<div class="row" id="geren">
+				<div class="col-md-12">
+					<!-- BEGIN SAMPLE TABLE PORTLET-->
+					<div class="portlet box blue">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-comments"></i>
+								<select id="xuenian12" class="name"></select>学年
+								<select id="xueqi12" class="name">
+									<option value="第1学期">第1学期</option>
+									<option value="第2学期">第2学期</option>
+								</select>明星教师表(
+								<select id="bumen12" class="name" onchange="selectChange('bumen12','nianji12')">
+									<option value="高中">高中</option>
+									<option value="初中">初中</option>
+									<option value="小学">小学</option>
+								</select>部
+								<select id="nianji12" class="name">
+									<option value='1'>一</option>
+									<option value='2'>二</option>
+									<option value='3'>三</option>
+								</select>年级)【基础表】
+							</div>
+							<div class="tools">
+								<button class="name2" onclick="mingxingxx()">查询</button>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="table-scrollable">
+								<table class="table table-bordered  table-hover">
+								<thead>
+								<tr>
+									<th >
+										序号
+									</th>
+									<th id="lineTd" >
+										    <span style="float:left;">教师</span>
+										    <span style="float:right;margin-top:-70px">明星10项</span>
+									</th>
+									<th>
+										师德最高尚<br>的老师
+									</th>
+									<th>
+										“271”教学<br>模式课堂结构把<br>握最好的教师
+									</th>
+									<th>
+										“五人小组”课<br>改最有效的老师
+									</th>
+									<th>
+										作业批改<br>最有效的老师
+									</th>
+									<th>
+										讲课最生动<br>有效的老师
+									</th>
+									<th>
+										课堂秩序<br>最好的老师
+									</th>
+									<th>
+										电子白板使用<br>最好的老师
+									</th>
+									<th>
+										批评教育学生方法<br>最得当的老师
+									</th>
+									<th>
+										辅导学生<br>最有耐心的老师
+									</th>
+									<th>
+										板书最好<br>的老师
+									</th>
+								</tr>
+								</thead>
+								<tbody id="mingxingbody">
+								
+								</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- END SAMPLE TABLE PORTLET-->
+				</div>
+				<div class="col-md-12">
+					<!-- BEGIN SAMPLE TABLE PORTLET-->
+					<div class="portlet box blue">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-comments"></i>
+								<select id="xuenian13" class="name"></select>学年
+								<select id="xueqi13" class="name">
+									<option value="第1学期">第1学期</option>
+									<option value="第2学期">第2学期</option>
+								</select>明星教师表(
+								<select id="bumen13" class="name" onchange="selectChange('bumen13','nianji13')">
+									<option value="高中">高中</option>
+									<option value="初中">初中</option>
+									<option value="小学">小学</option>
+								</select>部
+								<select id="nianji13" class="name">
+									<option value='1'>一</option>
+									<option value='2'>二</option>
+									<option value='3'>三</option>
+								</select>年级)【转换人数表】
+							</div>
+							<div class="tools">
+								转换规则:
+								<select id="leixing13" class="name">
+									<option value="班级数">班级数</option>
+									<option value="学生数">学生数</option>
+								</select>
+								<button class="name2" onclick="mingxingzh()">查询</button>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="table-scrollable">
+								<table class="table table-bordered  table-hover">
+								<thead>
+								<tr>
+									<th >
+										序号
+									</th>
+									<th id="lineTd" >
+										    <span style="float:left;">教师</span>
+										    <span style="float:right;margin-top:-70px">明星10项</span>
+									</th>
+									<th>
+										师德最高尚<br>的老师
+									</th>
+									<th>
+										“271”教学<br>模式课堂结构把<br>握最好的教师
+									</th>
+									<th>
+										“五人小组”课<br>改最有效的老师
+									</th>
+									<th>
+										作业批改<br>最有效的老师
+									</th>
+									<th>
+										讲课最生动<br>有效的老师
+									</th>
+									<th>
+										课堂秩序<br>最好的老师
+									</th>
+									<th>
+										电子白板使用<br>最好的老师
+									</th>
+									<th>
+										批评教育学生方法<br>最得当的老师
+									</th>
+									<th>
+										辅导学生<br>最有耐心的老师
+									</th>
+									<th>
+										板书最好<br>的老师
+									</th>
+								</tr>
+								</thead>
+								<tbody id="mingxingzhbody">
+								
+								</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- END SAMPLE TABLE PORTLET-->
+				</div>
+			</div>
+			<div class="row" id="mxpaiming">
+				<div class="col-md-12">
+					<!-- BEGIN SAMPLE TABLE PORTLET-->
+					<div class="portlet box blue">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-comments"></i>
+								<select id="xuenian14" class="name"></select>学年
+								<select id="xueqi14" class="name">
+									<option value="第1学期">第1学期</option>
+									<option value="第2学期">第2学期</option>
+								</select>明星教师表(
+								<select id="bumen14" class="name" onchange="selectChange('bumen14','nianji14')">
+									<option value="高中">高中</option>
+									<option value="初中">初中</option>
+									<option value="小学">小学</option>
+								</select>部
+								<select id="nianji14" class="name">
+									<option value='1'>一</option>
+									<option value='2'>二</option>
+									<option value='3'>三</option>
+								</select>年级)【排名表】
+							</div>
+							<div class="tools">
+								排名规则:
+								<select id="leixing14" class="name">
+									<option value="班级数">班级数</option>
+									<option value="学生数">学生数</option>
+								</select>
+								<button class="name2" onclick="mingxingpm()">查询</button>
+							</div>
+						</div>
+						
+					</div>
+					<!-- END SAMPLE TABLE PORTLET-->
+				</div>
+				<div class="col-md-12">
+					<!-- BEGIN SAMPLE TABLE PORTLET-->
+					<div class="portlet box blue">
+						<div class="portlet-title" style="min-height:20px">
+							<div class="caption" >
+							</div>
+							<div class="tools">
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="table-scrollable">
+								<table class="table table-bordered  table-hover">
+								<thead>
+								<tr>
+									<th id="lineTd" >
+										    <span style="float:left;">教师</span>
+										    <span style="float:right;margin-top:-40px">明星10项</span>
+									</th>
+									<th>
+										师德最高尚<br>的老师
+									</th>
+									<th id="lineTd" >
+											    <span style="float:left;">教师</span>
+											    <span style="float:right;margin-top:-40px">明星10项</span>
+										</th>
+										<th>
+										“271”教学<br>模式课堂结构把<br>握最好的教师
+										</th>
+										<th id="lineTd" >
+										    <span style="float:left;">教师</span>
+										    <span style="float:right;margin-top:-40px">明星10项</span>
+									</th>
+									<th>
+										“五人小组”课<br>改最有效的老师
+									</th>
+									<th id="lineTd" >
+										    <span style="float:left;">教师</span>
+										    <span style="float:right;margin-top:-40px">明星10项</span>
+									</th>
+									<th>
+										作业批改<br>最有效的老师
+									</th>
+									<th id="lineTd" >
+										    <span style="float:left;">教师</span>
+										    <span style="float:right;margin-top:-40px">明星10项</span>
+									</th>
+									<th>
+										讲课最生动<br>有效的老师
+									</th>
+									
+								</tr>
+								</thead>
+								<tbody id="mingxingpm1body">
+								
+								</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- END SAMPLE TABLE PORTLET-->
+				</div>
+				<div class="col-md-12">
+					<!-- BEGIN SAMPLE TABLE PORTLET-->
+					<div class="portlet box blue">
+						<div class="portlet-title" style="min-height:20px">
+							<div class="caption">
+							</div>
+							<div class="tools">
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="table-scrollable">
+								<table class="table table-bordered  table-hover">
+								<thead>
+									<tr>
+										<th id="lineTd" >
+											    <span style="float:left;">教师</span>
+											    <span style="float:right;margin-top:-30px">明星10项</span>
+										</th>
+										<th>
+											课堂秩序<br>最好的老师
+										</th>
+										<th id="lineTd" >
+											    <span style="float:left;">教师</span>
+											    <span style="float:right;margin-top:-30px">明星10项</span>
+										</th>
+										<th>
+											电子白板使用<br>最好的老师
+										</th>
+										<th id="lineTd" >
+											    <span style="float:left;">教师</span>
+											    <span style="float:right;margin-top:-30px">明星10项</span>
+										</th>
+										<th>
+											批评教育学生方法<br>最得当的老师
+										</th>
+										<th id="lineTd" >
+											    <span style="float:left;">教师</span>
+											    <span style="float:right;margin-top:-30px">明星10项</span>
+										</th>
+										<th>
+											辅导学生<br>最有耐心的老师
+										</th>
+										<th id="lineTd" >
+											    <span style="float:left;">教师</span>
+											    <span style="float:right;margin-top:-30px">明星10项</span>
+										</th>
+										<th>
+											板书最好<br>的老师
+										</th>
+									</tr>
+								</thead>
+								<tbody id="mingxingpm2body">
+								
+								</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- END SAMPLE TABLE PORTLET-->
+				</div>
+				
+			</div>
+			<div class="row" id="xingzheng">
+				<div class="col-md-12">
+					<!-- BEGIN SAMPLE TABLE PORTLET-->
+					<div class="portlet box blue">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-comments"></i>
+								<select id="xuenian16" class="name"></select>学年
+								<select id="xueqi16" class="name">
+									<option value="第1学期">第1学期</option>
+									<option value="第2学期">第2学期</option>
+								</select>行管人员民主测评表(
+								<select id="bumen16" class="name">
+									<option value="高中">高中</option>
+									<option value="初中">初中</option>
+									<option value="小学">小学</option>
+								</select>部,&nbsp&nbsp行政
+								<select id="bumen16" class="name">
+									<option value="12">一，二</option>
+									<option value="3">三</option>
+								</select>等岗)【排名表】
+							</div>
+							<div class="tools">
+								<button class="name2" onclick="xingzhengpaiming()">查询</button>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="table-scrollable">
+								<table class="table table-bordered  table-hover">
+								<thead>
+								<tr>
+									<th rowspan="2" style='display:table-cell; vertical-align:middle;text-align:center'>
+										序号
+									</th>
+									<th rowspan="2" style='display:table-cell; vertical-align:middle;text-align:center'>
+										姓名
+									</th>
+									<th colspan="5" style='display:table-cell; vertical-align:middle;text-align:center'>
+											服务态度(30%)   
+									</th>
+									<th colspan="5" style='display:table-cell; vertical-align:middle;text-align:center'>
+											服务能力(30%)   
+									</th>
+									<th colspan="5" style='display:table-cell; vertical-align:middle;text-align:center'>
+											服务效果(40%)   
+									</th>
+									<th rowspan="2" style='display:table-cell; vertical-align:middle;text-align:center' >
+										总分合计
+									</th>
+									<th rowspan="2" style='display:table-cell; vertical-align:middle;text-align:center'>
+										总位次
+									</th>
+									<th rowspan="2" style='display:table-cell; vertical-align:middle;text-align:center'>
+										等级
+									</th>
+								</tr>
+								<tr>
+									<th >
+										A
+									</th>
+									<th >
+										B
+									</th>
+									<th >
+										C
+									</th>
+									<th >
+										总分1
+									</th>
+									<th >
+										位序1
+									</th>
+									<th >
+										A
+									</th>
+									<th >
+										B
+									</th>
+									<th >
+										C
+									</th>
+									<th >
+										总分2
+									</th>
+									<th >
+										位序2
+									</th>
+									<th >
+										A
+									</th>
+									<th >
+										B
+									</th>
+									<th >
+										C
+									</th>
+									<th >
+										总分3
+									</th>
+									<th >
+										位序3
+									</th>
+								</tr>
+								</thead>
+								<tbody id="xingzhengbody">
+								
+								</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- END SAMPLE TABLE PORTLET-->
+				</div>				
+			</div>
+	</div>
+</div>
+<!-- END CONTENT -->
+<!-- BEGIN QUICK SIDEBAR -->
+<!-- END QUICK SIDEBAR -->
+<!-- END CONTAINER -->
+<!-- BEGIN FOOTER -->
+<div class="page-footer">
+<div class="page-footer-inner">
+	 2019 &copy; xaut by yuigahama yui. <a href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">Purchase Metronic!</a>
+</div>
+<div class="scroll-to-top">
+	<i class="icon-arrow-up"></i>
+</div>
+</div>
+<!-- END FOOTER -->
+<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+<!-- BEGIN CORE PLUGINS -->
+<!--[if lt IE 9]>
+<script src="assets/global/plugins/respond.min.js"></script>
+<script src="assets/global/plugins/excanvas.min.js"></script> 
+<![endif]-->
+<script src="assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
+<!-- IMPORTANT! Load jquery-ui.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+<script src="assets/global/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/jquery.cokie.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+<!-- END CORE PLUGINS -->
+<script src="assets/global/scripts/metronic.js" type="text/javascript"></script>
+<script src="assets/admin/layout/scripts/layout.js" type="text/javascript"></script>
+<script src="assets/admin/layout/scripts/quick-sidebar.js" type="text/javascript"></script>
+<script src="assets/admin/layout/scripts/demo.js" type="text/javascript"></script>
+<script>
+var zhanghao = '';
+var i = 0;
+var j = 0;
+jQuery(document).ready(function() {   
+   // initiate layout and plugins
+	Metronic.init(); // init metronic core components
+	Layout.init(); // init current layout
+	QuickSidebar.init(); // init quick sidebar
+	Demo.init(); // init demo features
+	var str = location.search.split("?")
+    console.log(str)
+    zhanghao = str[1]
+//denglutai(); */ */
+	getpai()
+	getY()
+	shezhi()
+	date()
+	num="5555"
+	$("#mxpaiming").hide()
+	$("#geren").hide()
+	$("#pjpaiming").hide()
+	$("#xingzheng").hide();
+	$("#pingjiaod").hide()
+	$("#xiugaid").hide()
+	$("#tianjiad").hide()
+	$("#shanchud").hide()
+	$("#guan").attr("value",num);
+	$("#guan").attr("size",num.length);
+	//查询教工信息
+	$("#1").blur(function(){ 
+		
+		var data = "zhanghao=" + $("#1").val();
+		$.ajax({
+			url : "ChaXunJiaoGong",
+			//同步方式
+			async : false,
+			data:data,
+			type : "post",
+			//指定请求成功后执行的回调函数
+			success : function(data) {
+				if(data == "不存在此教工"){
+					alert(data)
+					for(var i = 2 ; i <= 22 ; i ++){
+						$("#"+i).val("")
+					} 
+				}else{
+					k = JSON.parse(data)
+					console.log(k)
+					for(var i = 1 ; i <= k.length ; i ++){
+						$("#"+i).val(k[i-1])
+					}
+				}
+			}
+		});
+	});
+	//查询删除教工信息
+	$("#31").blur(function(){ 
+		for(var i = 30 ; i <= 52 ; i ++){
+			$("#"+i).empty()
+		}
+		var data = "zhanghao=" + $("#31").val();
+		$.ajax({
+			url : "ChaXunJiaoGong",
+			//同步方式
+			async : false,
+			data:data,
+			type : "post",
+			//指定请求成功后执行的回调函数
+			success : function(data) {
+				if(data == "不存在此教工"){
+					alert(data)
+					for(var i = 32 ; i <= 52 ; i ++){
+						$("#"+i).val("")
+					} 
+				}else{
+					k = JSON.parse(data)
+					console.log(k)
+					for(var i = 1 ; i <= k.length ; i ++){
+					    var j = i+30
+						$("#"+j).val(k[i-1])
+					}
+				}
+			}
+		});
+	});
+	//删除教工信息
+	$("#shanchu").blur(function(){ 
+		var data = "jiaogonghao="+$("#31").val();
+		console.log(data)
+		 $.ajax({
+			url : "ShanChuJiaoGong",
+			//同步方式
+			async : false,
+			data:data,
+			type : "post",
+			//指定请求成功后执行的回调函数
+			success : function(data) {
+				alert(data)
+			}
+		});
+	});
+	$("#exit").click(function(){
+		$(location).attr("href","login.html")
+	})
+});
+function selectChange(res1,res2){
+	console.log(res1,res2)
+	$("#"+res2).empty()
+	if($("#"+res1).val() == "小学"){
+		var option = "<option value='1'>一</option>";
+		option += "<option value='2'>二</option>";
+		option += "<option value='3'>三</option>";
+		option += "<option value='4'>四</option>";
+		option += "<option value='5'>五</option>";
+		option += "<option value='6'>六</option>";
+		$("#"+res2).append(option)
+	}else{
+		var option = "<option value='1'>一</option>";
+		option += "<option value='2'>二</option>";
+		option += "<option value='3'>三</option>";
+		$("#"+res2).append(option)
+	}
+}
+
+//获得当前设置时间
+function shezhi(){
+	$.ajax({
+		url : "DangQianSheZhi",
+		//同步方式
+		async : false,
+		data : zhanghao,
+		type : "post",
+		//指定请求成功后执行的回调函数
+		success : function(data) {
+			k = JSON.parse(data)
+			console.log(k)
+			$("#dangqianxuenian1").val(k[0])
+			$("#dangqianxueqi1").val(k[1])
+			$("#xuenian1").val(k[2])
+			$("#xueqi1").val(k[3])
+			$("#start1").val(k[4])
+			$("#end1").val(k[5])
+		}
+	})
+}
+function getpai(){
+	var data = "xuenian=2018-2019&xueqi=第1学期";
+	$.ajax({
+		url : "PaiMingJiaoGong",
+		//同步方式
+		async : false,
+		data : data,
+		type : "post",
+		//指定请求成功后执行的回调函数
+		success : function(data) {
+			k = JSON.parse(data)
+			console.log(k)
+		}
+	})
+}
+function denglutai(){
+	if(zhanghao == null){
+		$(location).attr("href","login.html")
+	}else{
+		$.ajax({
+			url : "DengLuTai",
+			//同步方式
+			async : false,
+			data : zhanghao+"&LeiXing=GuanLiYuan",
+			type : "get",
+			//指定请求成功后执行的回调函数
+			success : function(data) {
+				if(data == "false"){
+					$(location).attr("href","login.html")
+				}
+			}
+		})	
+	}
+}
+function qiehuan(res){
+	console.log(res)
+	if(res == "pingjiao"){
+		$("#pingjiaod").show();
+		$("#xiugaid").hide();
+		$("#tianjiad").hide();
+		$("#chakan").hide();
+		$("#shanchud").hide();
+		$("#pjpaiming").hide();
+		$("#geren").hide();
+		$("#xingzheng").hide();
+		$("#mxpaiming").hide();
+	}else if(res == "xiugai"){
+		$("#xiugaid").show();
+		$("#pingjiaod").hide();
+		$("#tianjiad").hide();
+		$("#shanchud").hide()
+		$("#chakan").hide();
+		$("#pjpaiming").hide();
+		$("#geren").hide();
+		$("#xingzheng").hide();
+		$("#mxpaiming").hide();
+	}else if(res == "tianjia"){
+		$("#xiugaid").hide();
+		$("#pingjiaod").hide();
+		$("#tianjiad").show();
+		$("#shanchud").hide()
+		$("#chakan").hide();
+		$("#pjpaiming").hide();
+		$("#geren").hide();
+		$("#xingzheng").hide();
+		$("#mxpaiming").hide();
+	}else if(res == "shanchu"){
+		$("#xiugaid").hide();
+		$("#pingjiaod").hide();
+		$("#tianjiad").hide();
+		$("#shanchud").show();
+		$("#chakan").hide();
+		$("#pjpaiming").hide();
+		$("#geren").hide();
+		$("#xingzheng").hide();
+		$("#mxpaiming").hide();
+	}else if(res == "chakan"){
+		$("#xiugaid").hide();
+		$("#pingjiaod").hide();
+		$("#tianjiad").hide();
+		$("#shanchud").hide();
+		$("#chakan").show();
+		$("#pjpaiming").hide();
+		$("#geren").hide();
+		$("#mxpaiming").hide();
+		$("#xingzheng").hide();
+	}else if(res == "pjpaiming"){
+		$("#xiugaid").hide();
+		$("#pingjiaod").hide();
+		$("#tianjiad").hide();
+		$("#shanchud").hide();
+		$("#chakan").hide();
+		$("#pjpaiming").show();
+		$("#geren").hide();
+		$("#mxpaiming").hide();
+		$("#xingzheng").hide();
+		getY();
+	}else if(res == "geren"){
+		$("#xiugaid").hide();
+		$("#pingjiaod").hide();
+		$("#tianjiad").hide();
+		$("#shanchud").hide();
+		$("#chakan").hide();
+		$("#pjpaiming").hide();
+		$("#geren").show();
+		$("#xingzheng").hide();
+		$("#mxpaiming").hide();
+	}else if(res == "mxpaiming"){
+		$("#xiugaid").hide();
+		$("#pingjiaod").hide();
+		$("#tianjiad").hide();
+		$("#shanchud").hide();
+		$("#chakan").hide()
+		$("#pjpaiming").hide();
+		$("#geren").hide();
+		$("#mxpaiming").show();
+		$("#xingzheng").hide();
+	}else if(res == "xzpaiming"){
+		$("#xiugaid").hide();
+		$("#pingjiaod").hide();
+		$("#tianjiad").hide();
+		$("#shanchud").hide();
+		$("#chakan").hide()
+		$("#pjpaiming").hide();
+		$("#geren").hide();
+		$("#mxpaiming").hide()
+		$("#xingzheng").show();
+	}
+}
+//获得当前学年学期以及学年学期范围
+function date(){
+	var date = new Date();
+	var dangqianxueqi,dangqianxuenian,xiayi
+	var year = date.getFullYear()
+	var month = date.getMonth()+1;
+	if(month > 2 && month < 9){
+		var nian1 = year+1
+		dangqianxueqi = "第2学期"
+		dangqianxuenian = year-1 + "-" + year;
+		xiayi = year + '-' + nian1
+	}else {
+		dangqianxueqi = "第1学期"
+		if(month >= 9 && month <= 12){
+			var nian1 = year+1
+			var nian2 = year+2
+			dangqianxuenian = year + '-' + nian1;
+			xiayi = year+1 + '-' + nian2
+		}else {
+			dangqianxuenian = year-1 + "-" + year;
+			var nian = year+1
+			xiayi = year + '-' + nian
+		}
+	}
+	var option = '<option>'+dangqianxuenian+'</option><option>'+xiayi+'</option>'
+	$("#xuenian").append(option)
+	$("#dangqianxuenian").append(option)
+}
+//上传评教时间信息
+function submit1(){
+	var qbtx = true;
+	if($('#dangqianxuenian').val() == "" || $("#dangqianxueqi").val() == "" || $("#xuenian").val() == "" 
+			|| $("#xueqi").val() == "" || $("#start").val() == "" || $("#end").val() == ""){
+		qbtx = false;
+	} 
+	if(qbtx){
+		var data=zhanghao+"&"+$('#pingjiao').serialize()
+		console.log(data)
+		$.ajax({
+			url : "PingJiaoSheZhi",
+			//同步方式
+			async : false,
+			data:data,
+			type : "post",
+			//指定请求成功后执行的回调函数
+			success : function(data) {
+				alert(data)
+			}
+		});
+	}else {
+		alert('请填全选项');
+	}
+	
+}
+
+//上传教工修改信息
+function submit3(){
+	var data = $("#form1").serialize();
+	data += "&" + $("#form2").serialize();
+	console.log(data)
+	 $.ajax({
+		url : "XiuGaiJiaoGong",
+		//同步方式
+		async : false,
+		data:data,
+		type : "post",
+		//指定请求成功后执行的回调函数
+		success : function(data) {
+			alert(data)
+			/* for(var i = 1 ; i <= k.length ; i ++){
+				$("#"+i).val(k[i-1])
+			} */
+		}
+	});
+}
+
+//获得学年
+function getY(){
+	$.ajax({
+		url : "DeXueNian",
+		//同步方式
+		async : false,
+		data:"leixing='guanliyuan",
+		type : "post",
+		//指定请求成功后执行的回调函数
+		success : function(data) {
+			k = JSON.parse(data)
+			console.log(k)
+			for(var i = 0 ; i < k.length ; i ++){
+				console.log(k[i])
+				var option = "<option value='"+k[i]+"'>"+k[i]+"</option>";
+				console.log(option)
+				$("#xuenian11").append(option);
+				$("#xuenian12").append(option);
+				$("#xuenian13").append(option);
+				$("#xuenian14").append(option);
+				$("#xuenian16").append(option);
+			}
+		}
+	});
+}
+
+function xingzhengpaiming(){
+	var data = "xuenian="+$("#xuenian16").val()+"&xueqi="+$("#xueqi16").val()+"&bumen="+$("#bumen16").val()
+	$("#xingzhengbody").empty()
+	console.log(data)
+	$.ajax({
+		url : "ZongHeXingZhengPaiMing",
+		//同步方式
+		async : false,
+		data:data,
+		type : "post",
+		//指定请求成功后执行的回调函数
+		success : function(data) {
+			k = JSON.parse(data)
+			// k 结构    总排名   各项基础信息  各项总分排名
+			console.log(k)
+			for(var i = 0 ; i < k[0].length ; i ++){
+				var tr  = "<tr>"
+				var j = i+1;
+				tr += "<td>"+j+"</td>";
+				tr += "<td>"+k[0][i][3]+"</td>";
+				// a b c 总分 排名
+				var grade = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]];
+				var mark = 0;
+				for(var m = 0 ; m < k[1].length ; m ++){
+					if(k[0][i][0] == k[1][m][0][0]){
+						mark = m;
+						break;
+					}
+				}
+				// 改造基础信息显示
+	 			for(var t = 1 ; t < 4 ; t ++){
+					for(var j = 0 ; j < k[1][mark].length ; j++){
+						if(t == k[1][mark][j][1]){
+	 						var x = parseInt(k[1][mark][j][2])
+	 						var y = parseInt(k[1][mark][j][3])
+	 						if(y/x == 4 ){
+	 							grade[t-1][1] += x;
+	 						}else if(y/x == 3 ){
+	 							grade[t-1][2] += x;
+	 						}else if(y/x == 5 ){
+	 							grade[t-1][0] += x;
+	 						}
+	 					}
+					}
+	 			}
+	 			// 改造总分排名显示
+	 			for(var t = 0 ; t < 3 ; t ++){
+		 			for(var m = 0 ; m < k[2][t].length ; m ++){
+						if(k[0][i][0] == k[2][t][m][0]){
+							mark = m;
+							break;
+						}
+					}
+		 			grade[t][3] = k[2][t][mark][1]
+		 			grade[t][4] = k[2][t][mark][2]
+	 			}
+	 			for(var t = 0 ; t < 3 ; t ++){
+	 				tr += "<td>"+grade[t][0]+"</td>"
+	 				tr += "<td>"+grade[t][1]+"</td>"
+	 				tr += "<td>"+grade[t][2]+"</td>"
+	 				tr += "<td>"+grade[t][3]+"</td>"
+	 				tr += "<td>"+grade[t][4]+"</td>"
+	 			}
+				tr += "<td>"+k[0][i][1]+"</td>";
+				tr += "<td>"+k[0][i][2]+"</td>";
+				tr += "<td>"+"A"+"</td>";
+				tr += "</td>"
+				$("#xingzhengbody").append(tr)
+			}
+		}
+	});
+}
+//获得信息
+function zonghepaiming(){
+	var data = "xuenian="+$("#xuenian11").val()+"&xueqi="+$("#xueqi11").val()+"&bumen="+$("#bumen11").val()+"&nianji="+$("#nianji11").val();
+	$("#zonghebody").empty()
+	console.log(data)
+	$.ajax({
+		url : "ZengHePaiMing",
+		//同步方式
+		async : false,
+		data:data,
+		type : "post",
+		//指定请求成功后执行的回调函数
+		success : function(data) {
+			k = JSON.parse(data)
+			console.log(k)
+			for(var i = 0 ; i < k[1].length ; i ++){
+				var tr  = "<tr>"
+				var j = i+1;
+				tr += "<td>"+j+"</td>";
+				tr += "<td>"+k[0][i*10][2]+"</td>";
+				tr += "<td>"+k[0][i*10][4]+"</td>";
+				tr += "<td>"+k[0][i*10][5]+"</td>";
+				tr += "<td>"+k[0][i*10+1][5]+"</td>";
+				tr += "<td>"+k[0][i*10+2][5]+"</td>";
+				tr += "<td>"+k[0][i*10+3][5]+"</td>";
+				tr += "<td>"+k[0][i*10+4][5]+"</td>";
+				tr += "<td>"+k[0][i*10+5][5]+"</td>";
+				tr += "<td>"+k[0][i*10+6][5]+"</td>";
+				tr += "<td>"+k[0][i*10+7][5]+"</td>";
+				tr += "<td>"+k[0][i*10+8][5]+"</td>";
+				tr += "<td>"+k[0][i*10+9][5]+"</td>";
+				tr += "<td>"+k[1][i][1]+"</td>";
+				tr += "<td>"+k[1][i][2]+"</td>";
+				tr += "<td>"+k[1][i][3]+"</td>";
+				tr += "<td>"+k[1][i][4]+"</td>";
+				tr += "<td>"+k[1][i][5]+"</td>";
+				tr += "<td>"+k[1][i][6]+"</td>";
+				tr += "<td>"+k[1][i][7]+"</td>";
+				tr += "<td>"+k[1][i][8]+"</td>";
+				tr += "<td>"+k[1][i][9]+"</td>";
+				tr += "<td>"+k[1][i][10]+"</td>";
+				tr += "<td>"+k[1][i][11]+"</td>";
+				tr += "<td>"+k[1][i][12]+"</td>";
+				tr += "<td>"+"A"+"</td>";
+				tr += "</td>"
+				$("#zonghebody").append(tr)
+			}
+		}
+	});
+}
+function mingxingxx(){
+	var data = "xuenian="+$("#xuenian12").val()+"&xueqi="+$("#xueqi12").val()+"&bumen="+$("#bumen12").val()+"&nianji="+$("#nianji12").val();
+	$("#mingxingbody").empty()
+	console.log(data)
+	$.ajax({
+		url : "ZongHeMingXinXi",
+		//同步方式
+		async : false,
+		data:data,
+		type : "post",
+		//指定请求成功后执行的回调函数
+		success : function(data) {
+			k=JSON.parse(data)
+			console.log(data)
+			for(var i = 0 ; i < k[k.length-1];i++){
+				u = 0;
+				var t = i+1;
+				var tr  = "<tr>"
+				tr += "<td>"+t+"</td>";
+				tr += "<td>"+k[i*10+u][3]+"</td>";
+				for(var j = 1 ; j <= 10 ; j ++){
+					if( j+"" == k[i*10+u][4]){
+						tr += "<td>"+k[i*10+u][6]+"</td>";
+						u++;
+					}else{
+						tr += "<td>0</td>";
+					}
+				}
+				tr += "</tr>"
+				$("#mingxingbody").append(tr)
+					
+			}
+		}
+	});
+}
+function mingxingzh(){
+	var data = "xuenian="+$("#xuenian13").val()+"&xueqi="+$("#xueqi13").val()+"&bumen="+$("#bumen13").val()+"&nianji="+$("#nianji13").val()+"&leixing="+$("#leixing13").val();
+	$("#mingxingzhbody").empty()
+	console.log(data)
+	$.ajax({
+		url : "ZongHeMingXingZhuanHuan",
+		//同步方式
+		async : false,
+		data:data,
+		type : "post",
+		//指定请求成功后执行的回调函数
+		success : function(data) {
+			k=JSON.parse(data)
+			console.log(k)
+			for(var i = 0 ; i < k[k.length-1];i++){
+				u = 0;
+				var t = i+1;
+				var tr  = "<tr>"
+				tr += "<td>"+t+"</td>";
+				tr += "<td>"+k[i*10+u][3]+"</td>";
+				for(var j = 1 ; j <= 10 ; j ++){
+					if( j+"" == k[i*10+u][4]){
+						tr += "<td>"+k[i*10+u][6]+"</td>";
+						u++;
+					}else{
+						tr += "<td>0</td>";
+					}
+				}
+				tr += "</tr>"
+				$("#mingxingzhbody").append(tr)		
+			}
+		}
+	});
+}
+function mingxingpm(){
+	var data = "xuenian="+$("#xuenian14").val()+"&xueqi="+$("#xueqi14").val()+"&bumen="+$("#bumen14").val()+"&nianji="+$("#nianji14").val()+"&leixing="+$("#leixing14").val();
+	$("#mingxingzhbody").empty()
+	console.log(data)
+	$.ajax({
+		url : "ZongHeMingXingPaiMing",
+		//同步方式
+		async : false,
+		data:data,
+		type : "post",
+		//指定请求成功后执行的回调函数
+		success : function(data) {
+			
+			k=JSON.parse(data);
+			console.log(k);
+			for(var j = 0 ; j < k[0].length;j ++){
+				var tr  = "<tr>"
+				for(var i = 0 ; i < 5;i++){	
+					tr += "<td>"+k[i][j][1]+"</td>";
+					tr += "<td>"+k[i][j][4]+"</td>";
+				}
+				tr += "</tr>"
+				$("#mingxingpm1body").append(tr)	
+			}
+			
+			for(var j = 0 ; j < k[0].length;j ++){
+				var tr  = "<tr>"
+				for(var i = 5 ; i < 10;i++){	
+					tr += "<td>"+k[i][j][1]+"</td>";
+					tr += "<td>"+k[i][j][4]+"</td>";
+				}
+				tr += "</tr>"
+				$("#mingxingpm2body").append(tr)	
+			}
+		}
+	});
+}
+</script>
+<!-- END JAVASCRIPTS -->
+</body>
+<!-- END BODY -->
+</html>

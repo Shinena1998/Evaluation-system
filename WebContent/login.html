@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="jquery/jquery-3.3.1.min.js"></script>
+<title>登录</title>
+</head>
+<style>
+body{
+	width:100%;
+	height:100%;
+	display:flex;
+	align-items:center;
+	flex-direction:column;
+}
+.tishi{
+    height:10%;
+	display:flex;
+	align-items:center;
+	justify-content: center;
+	margin-top:30px;
+	color:red;
+}
+.logo{
+	height:30%;
+	display:flex;
+	align-items:center;
+	justify-content: center;
+	margin-top:50px;
+}
+
+.logo-text{
+	color:blue;
+	font-size:160%;
+	font-family:serif;
+	margin-left:5px;
+}
+.logo-banquan{
+    margin-left:267px;
+}
+.all{    
+    border: 6px outset blue;
+	height:50%;
+	display:flex;
+	align-items:center;
+	justify-content: center;
+	margin-top:10px;
+}
+.xuexiao{
+	width:480px;
+	height:256px
+}
+.title{
+	display:flex;
+	align-items:center;
+	flex-direction:column;
+    background-color: aliceblue;
+	height:256px;
+}
+.denglu{
+	color:#0303bd;
+	font-size:160%;
+	font-family:serif;
+	margin-left:5px;
+	border-bottom: 1px solid #9999;
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+}
+.biaoge{
+	height:160px;
+}
+.button{
+	display:flex;
+	align-items:center;
+	justify-content: space-evenly;
+	margin-top:10px;
+	padding-right:40px;
+}
+</style>
+<body>
+<div class="tishi">
+	温馨提示:<br>
+</div>
+<div class="tishi">
+	请不要使用任何第三方软件来查询和使用教务信息，这样可能会泄露您的用户名和密码。<br>
+</div>
+<div class="logo">
+	<img alt="logo" src="img/logo_school.png">
+	<div class="logo-text">考评管理系统</div>
+	<div class="logo-banquan">@由比滨结衣</div>
+</div>
+<div class="all">
+    <img class="xuexiao" alt="" src="img/timg.jpeg">
+	<div class="title">
+	    <div class="denglu">
+		  用户登录/LOGIN
+		</div>
+		<form id="contant">
+			<table  class="biaoge">
+				<tr>
+					<td>用户名:</td>
+					<td><input type="text" name="username" id="username">(学号，教工号)</td>
+				</tr>	
+				<tr>
+					<td align="right">密码:</td>
+					<td><input type="password" name="password"></td>
+				</tr>	
+				<tr>
+					<td align="right">验证码:</td>
+					<td>
+						<input type="text" name="yanzhengma">
+						<img alt="验证码" src="" id="yanzhengma" onclick="yanzheng()">
+					</td>
+				</tr>	
+				<tr>
+					<td align="right">类型:</td>
+					<td>
+						<input type="radio" name="leixing" checked value='XueShengBiao' /><label>学生</label>
+						<input name="leixing"  type="radio" value="JiaoGongBiao" /><label>教工</label>
+						<input name="leixing"  type="radio" value="PeiZhiBiao" /><label>管理员</label>
+					</td>
+				</tr>	
+			</table>
+			<div class="button">
+				<input type="button" value="登录" onclick="submit1()">
+				<input type="reset" value="取消" >
+			</div>
+		</form>
+	</div>
+</div>
+<div style="font-size:130%;margin-top:10px">@西安理工大学</div>
+<script>
+jQuery(document).ready(function() {     /* 
+	$("#asd").css('visibility','hidden') */
+/* 
+    $("#asd").css('visibility','visible');
+	  $("#asd").click(); */
+	  yanzheng()
+/* 	$(location).attr('href', 'student.html?&student=1&loaction=3+2'); */
+});
+function yanzheng(){
+	$.ajax({
+		url : "YanZhengMa",
+		//同步方式
+		async : false,
+		type : "get",
+		//指定请求成功后执行的回调函数
+		success : function(data) {
+			console.log(data)
+			$('#yanzhengma').attr('src',"data:image/png;base64,"+data)
+		},
+		error : function() {
+			alert("error");
+		}
+	}); 
+}
+function submit1(){
+	var post= $("#contant").serialize();
+	console.log(post)
+	$.ajax({
+		url : "Login",
+		//同步方式
+		async : false,
+		data : post,
+		type : "get",
+		//指定请求成功后执行的回调函数
+		success : function(data) {
+			console.log(data)
+			if(data == "true"){
+				/* var BianHao = $('input[name="leixing"]:checked').val() + ".html?zhanghao=" + $("#username").val();
+				$(location).attr('href',BianHao) */
+				var BianHao = "JiaoGongBiao.html?zhanghao=" + $("#username").val();
+				$(location).attr('href',BianHao)
+			}else{
+				alert(data)
+				yanzheng();
+			}
+		},
+		error : function() {
+			alert("error");
+		}
+	}); 
+} 
+</script>
+
+<!-- $('input:radio:checked').val()；
+   
+$("input[type='radio']:checked").val();
+
+$("input[name='rd']:checked").val(); -->
+<!-- END JAVASCRIPTS -->
+</body>
+<!-- END BODY -->
+</html>

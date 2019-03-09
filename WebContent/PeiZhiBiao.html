@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="jquery/jquery-3.3.1.min.js"></script>
+<title>管理员界面</title>
+</head>
+<style>
+body{
+    width:100%;
+    height:100%;
+	background-color: #e6ecf0;
+	display:flex;
+	align-items:center;
+	flex-direction:column;
+	margin-top:0px;
+}
+.deleteImg{
+height: 25px;
+    width: 25px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.all{
+    width:841.8px;
+    background-color:white;
+}
+.top{
+	width:100%;
+	height:50px;
+	background-color:white;
+    background-image:url("img/top.png");
+	display:flex;
+	align-items:center;
+	justify-content: space-between;
+}
+.guanliyuan{
+	border:none;
+	color:blue;
+	background:none;
+}
+.tuichu{
+	border:none;
+	margin-right:5px;
+	background:none;
+}
+.logo{
+	display:flex;
+	flex-direction:row;
+}
+.logo-img{
+	width:150px;
+	height:50px;
+}
+.logo-text{
+	color:blue;
+	font-size:160%;
+	font-family:serif;
+	margin-left:5px;
+    line-height: 50px;
+}
+.gongneng{
+	background-color:#bbffc7;
+	width:100%;
+    position: relative;
+    float: left;
+    line-height: 150%;
+    margin-block-start:0px;
+    margin-block-end:0px;
+    margin-inline-start:0px;
+    margin-inline-end:0px;
+	margin:0PX;
+}
+.contant{
+    display: block;
+    float: left;
+    padding-left:15px;
+    padding-right:15px;
+    /* border-left:1px solid blue; */
+    border-right:1px solid blue;
+}
+ul{
+    list-style: none;
+   	line-height:50px;
+    padding-inline-start:0PX;
+}
+a{
+    text-decoration:none;
+}
+.dangqian{
+    display: flex;
+    justify-content: space-evenly;   
+    margin-top: 50px;
+}
+.tianjia{
+	display:flex;
+	align-items:center;
+	flex-direction:column;
+    margin-top: 50px;
+}
+.xiugaid{
+	width:100%;
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+	justify-content: space-evenly;
+    margin-top: 30px;
+}
+.xiugai{
+/* 	display:flex;
+	align-items:center;
+	flex-direction:column;
+	justify-contant:space-evenly; */
+}
+.xiugai_sub{
+	display:flex;
+    justify-content: space-evenly;  
+}
+span{
+    width: 100px;
+    font-size: 14px;
+    color: #333;
+    text-align: right;
+    display: inline-block;
+    margin-right: 10px;
+}
+</style>
+<body>
+<div class="all">
+	<div class="top">
+	    <div class="logo">
+			<img alt="logo" class="logo-img"src="img/logo_school.png">
+			<div class="logo-text">考评管理系统</div>
+		</div>
+		<div>欢迎您:<input class="guanliyuan" type="text" readonly name="guanliyuan" id="guan" value="21231" size="">管理员|<input class="tuichu" class="exit" type="button" readonly value="退出" onclick="tuichu()"></div>
+	</div>
+	<ul class="gongneng">
+		<li class="contant" onclick="xuanze('pingjiao')">  <a href="#">设置评教时间</a>  </li>
+		<li class="contant" onclick="xuanze('pingjiao')">  <a href="#">设置评教内容</a>  </li>
+		<li class="contant" onclick="xuanze('tianjia')">  <a href="#">添加教工</a>  </li>
+		<li class="contant" onclick="xuanze('xiugai')">  <a href="#">修改教工信息</a>  </li>
+		<li class="contant" onclick="xuanze('xiugai')">  <a href="#">批量操作</a>  </li>
+	</ul>
+	<div id="pingjiaod">
+	    <form id="pingjiao">
+	    <h2 class="dangqian">评教设置</h2>
+		<div class="dangqian">
+			<div>
+				当前学年：<input class="guanliyuan" type="text" readonly name="dangqianxuenian" id="dangqianxuenian" value="" size="10">
+			</div>
+			<div>
+				当前学期：<input class="guanliyuan" type="text" readonly name="dangqianxueqi" id="dangqianxueqi" value="" size="8">
+			</div>
+		</div>
+		<div class="dangqian">
+			<div>
+				学年：
+				<select id="xuenian" name="xuenian"  onchange="change()">
+				</select>
+			</div>
+			<div>
+				学期：
+				<select id="xueqi" name="xueqi" onchange="change()">
+						<option value="第1学期">第1学期</option>
+						<option value="第2学期">第2学期</option>
+				</select>
+			</div>
+		</div>
+		<div class="dangqian">
+			<div>
+				开始时间：<input type="date" name="start" id="guan" value="" >
+			</div>
+			<div>
+			    结束时间：<input type="date"  name="end" id="guan" value="" >
+			</div>
+		</div>
+		<div class="dangqian">
+			<input type="button" value="提交" onclick="submit1()">
+			<input type="reset" value="取消">
+		</div>
+		</form>
+	</div>
+	<div id="tianjiad">
+		<form id="tianjia" >
+		<div  class="tianjia">
+			<table>
+				<tr>
+					<td>教工号:</td>
+					<td><input type="text" name="jiaogonghao" id="username"></td>
+				</tr>	
+				<tr>
+					<td align="right">姓名:</td>
+					<td><input type="text" name="xingming"></td>
+				</tr>
+				<tr>
+					<td align="right">密码:</td>
+					<td><input type="text" name="mima" placeholder="不填密码则随机生成"></td>
+				</tr>		
+			</table>
+			<div class="button">
+				<input type="button" value="添加" onclick="submit2()">
+				<input type="reset" value="取消" >
+			</div>
+		</div>
+		</form>
+	</div>
+	<div id="xiugaid">
+		<form id="xiugai">
+		<div  class="xiugaid">
+			<ul class="xiugai">
+				<li><span>教工号：</span><input type="text" name="1" id="1"><input type="button" style="margin-left:20px"  value="查询" onclick="chaxun()"></li>
+				<li><span>姓名：</span><input type="text" name="2" id = "2"></li>
+				<li><span>密码：</span><input type="text" name="3" id = "3"></li>
+				<li><span>性别：</span><input type="text" name="4" id = "4"></li>
+				<li><span>出生日期：</span><input type="date" name="5" id = "5"></li>
+				<li><span>最高学历：</span><input type="text" name="6" id = "6"></li>
+				<li><span>职称：</span><input type="text" name="7" id = "7"></li> //这里有错误
+				<li><span>身份证号：</span><input type="text" name="7" id = "7"></li>
+				<li><span>学科科目：</span><input type="text" name="8" id = "8"></li>
+				<li><span>入校日期：</span><input type="date" name="9" id = "9"></li>
+				<li>
+					<span>部门：</span>
+					<select id="10" name="10">
+						<option value="高中">高中 </option>
+						<option value="初中">初中</option>
+						<option value="小学">小学</option>
+					</select>
+				</li>
+				<li>
+					<span>类别：</span>
+					<select id="11" name="11">
+						<option value="档案类">档案类 </option>
+						<option value="非档案类">非档案类</option>
+						<option value="政府">政府</option>
+					</select>
+				</li>
+			</ul>
+			<ul class="xiugai">
+				<li>
+					<span>职别：</span>
+					<select id="12" name='12'>
+						<option value="教师">教师 </option>
+						<option value="行政">行政</option>
+						<option value="教师兼任行政">教师兼任行政</option>
+					</select>
+				</li>
+				<li>
+					<span>是否备课组长：</span>
+					<select id="13" name='13'>
+						<option value="1">是</option>
+						<option value="0">否</option>
+					</select>
+				</li>
+				<li>
+					<span>是否年级主任：</span>
+					<select id="14" name='14'>
+						<option value="1">是</option>
+						<option value="0">否</option>
+					</select>
+				</li>
+				<li>
+					<span>是否教研组长：</span>
+					<select id="15" name="15">
+						<option value="1">是</option>
+						<option value="0">否</option>
+					</select>
+				</li>
+				<li><span>最高学历学校：</span><input type="text" name="16" id = "16"></li>
+				<li><span>最高学历专业：</span><input type="text" name="17" id = "17"></li>
+				<li><span>手机：</span><input type="text" name="18" id = "18"></li>
+				<li><span>邮箱：</span><input type="text" name="19" id = "19"></li>
+				<li><span>微信：</span><input type="text" name="20" id = "20"></li>
+				<li><span>QQ：</span><input type="text" name="21" id = "21"></li>
+			</ul>
+		</div>
+		<div class="xiugai_sub">
+			<input type="button" value="修改" onclick="submit3()">
+			<input type="reset" value="取消" >
+		</div>
+		</form>
+	</div>
+</div>
+<!-- <form id="contant">
+<table class="table table-striped table-hover table-bordered" id="sample_editable_1">
+<thead>
+<tr>
+	<th>
+		 开始时间
+	</th>
+	<th>
+		 结束时间
+	</th>
+</tr>
+</thead>
+<tbody id="tbody">
+<tr>
+	<td><input type="date" id="start" name="start" ></td>
+	<td><input type="date" id="end" name="end"></td>
+</tr>
+</tbody>	
+</table>
+<table class="table table-striped table-hover table-bordered" id="sample_editable_1" >
+<thead>
+<tr>
+	<th>
+		 内容
+	</th>
+	<th>
+		 分数
+	</th>
+	<th>
+		 
+	</th>
+</tr>
+</thead>
+<tbody id="cbody">
+</tbody>	
+</table>
+<button onclick="csubmit()" >提交</button>
+<button onclick="close()" name="asda">关闭评教</button>
+</form> -->
+</body>
+<script>
+var zhanghao = '';
+var i = 0;
+var j = 0;
+jQuery(document).ready(function() { 
+	var str = location.search.split("?")
+    console.log(str)
+    zhanghao = str[1]
+	denglutai();
+  
+   
+    var num = zhanghao.split("=")[1]
+    console.log(num) 
+/*      zhanghao = "zhanghao=1"; */
+   
+   console.log("height:"+$(window).height()+"px;");
+    $(".all").attr("style","height:"+$(window).height()+"px;");
+    
+	$("#guan").attr("value",num);
+	$("#guan").attr("size",num.length);
+	
+	$("#xiugaid").hide();
+	$("#tianjiad").hide();
+	
+
+});
+
+function date(){
+	var date = new Date();
+	var dangqianxueqi,dangqianxuenian,xiayi
+	var year = date.getFullYear()
+	var month = date.getMonth()+1;
+	if(month > 2 && month < 9){
+		var nian1 = year+1
+		dangqianxueqi = "第2学期"
+		dangqianxuenian = year-1 + "-" + year;
+		xiayi = year + '-' + nian1
+	}else {
+		dangqianxueqi = "第1学期"
+		if(month >= 9 && month <= 12){
+			var nian1 = year+1
+			var nian2 = year+2
+			dangqianxuenian = year + '-' + nian1;
+			xiayi = year+1 + '-' + nian2
+		}else {
+			dangqianxuenian = year-1 + "-" + year;
+			var nian = year+1
+			xiayi = year + '-' + nian
+		}
+	}
+	$("#dangqianxuenian").val(dangqianxuenian)
+	$("#dangqianxueqi").val(dangqianxueqi)
+	$("#xueqi").val(dangqianxueqi)
+	var option = '<option>'+dangqianxuenian+'</option><option>'+xiayi+'</option>'
+	$("#xuenian").append(option)
+}
+function xuanze(res){
+	console.log(res)
+	if(res == "pingjiao"){
+		$("#pingjiaod").show();
+		$("#xiugaid").hide();
+		$("#tianjiad").hide();
+	}else if(res == "xiugai"){
+		$("#xiugaid").show();
+		$("#pingjiaod").hide();
+		$("#tianjiad").hide();
+	}else if(res == "tianjia"){
+		$("#xiugaid").hide();
+		$("#pingjiaod").hide();
+		$("#tianjiad").show();
+	}
+}
+function submit2(){
+	var data = $("#tianjia").serialize();
+	console.log(data)
+	$.ajax({
+		url : "TianJiaJiaoGong",
+		//同步方式
+		async : false,
+		data:data,
+		type : "post",
+		//指定请求成功后执行的回调函数
+		success : function(data) {
+			alert("添加成功")
+		}
+	});
+}
+function chaxun(){
+	var data = "jiaogonghao=" + $("#1").val();
+	$.ajax({
+		url : "ChaXunJiaoGong",
+		//同步方式
+		async : false,
+		data:data,
+		type : "post",
+		//指定请求成功后执行的回调函数
+		success : function(data) {
+			k = JSON.parse(data)
+			console.log(k)
+			for(var i = 1 ; i <= k.length ; i ++){
+				$("#"+i).val(k[i-1])
+			}
+		}
+	});
+}
+function submit1(){
+	var data=zhanghao+"&"+$('#pingjiao').serialize()
+	
+	console.log(data)
+	$.ajax({
+		url : "PingJiaoSheZhi",
+		//同步方式
+		async : false,
+		data:data,
+		type : "post",
+		//指定请求成功后执行的回调函数
+		success : function(data) {
+			alert(data)
+		}
+	});
+}
+function submit3(){
+	var data = $("#xiugai").serialize();
+	console.log(data)
+	$.ajax({
+		url : "XiuGaiJiaoGong",
+		//同步方式
+		async : false,
+		data:data,
+		type : "post",
+		//指定请求成功后执行的回调函数
+		success : function(data) {
+			alert(data)
+			/* for(var i = 1 ; i <= k.length ; i ++){
+				$("#"+i).val(k[i-1])
+			} */
+		}
+	});
+}
+function tuichu(){
+	$(location).attr("href","login.html")
+}
+/* function getContant(){
+	$.ajax({
+		url : "manager",
+		//同步方式
+		async : false,
+		type : "get",
+		//指定请求成功后执行的回调函数
+		success : function(data) {
+			var k = JSON.parse(data)
+			var contant = k.contant.split("+")
+			var grade = k.grade.split("+");
+			for(i=0; i < contant.length-1 ; i ++){
+				var tr = "<tr class="+i+">";
+				tr += "<td><input type='text' class='buyInput' name='contant"+i+"' onblur='checked()' value='"+contant[i]+"'></td>";
+				tr += "<td><input type='text' class='buyInput' name='grade"+i+"' onblur='checked()' value='"+grade[i]+"'></td>";
+				tr += "<td><img class='deleteImg' src='img/delete.png' onclick='delete1("+i+")'></img></td>";
+				tr += "</tr>";
+				$("#cbody").append(tr);
+			}
+			j = i;
+			var tr = "<tr class="+i+">";
+			tr += "<td></td>";
+			tr += "<td></td>";
+			tr += "<td><img class='deleteImg' src='img/add.png' onclick='add()'></img></td>";
+			tr += "</tr>";
+			$("#cbody").append(tr);
+			$('#start').val(k.startTime)
+			$("#end").val(k.endTime)
+		},
+		error : function() {
+			alert("error");
+		}
+	});
+}
+function add(){
+	console.log(i)
+	$("."+i).attr("class",i+1)
+	var tr = "<tr class="+i+">";
+	tr += "<td><input type='text' class='buyInput' name='contant"+i+"' onblur='checked()'></td>";
+	tr += "<td><input type='text' class='buyInput' name='grade"+i+"' onblur='checked()'></td>";
+	tr += "<td><img class='deleteImg' src='img/delete.png' onclick='delete1("+i+")'></img></td>";
+	tr += "</tr>";
+	i=i+1
+	j=j+1;
+	$("."+i).before(tr);
+}
+function delete1(i){
+	$("."+i).remove()
+	j=j-1
+}
+function csubmit(res){
+	var postData = $("#contant").serialize();
+	var count = j;
+	alert(postData)
+	$.ajax({
+		url : "changeEva",
+		//同步方式
+		async : false,
+		data : postData+"&count="+count,
+		type : "get",
+		//指定请求成功后执行的回调函数
+		success : function(data) {
+			alert(data)
+		},
+		error : function() {
+			alert("error");
+		}
+	});
+}  */
+</script>
+</html>
